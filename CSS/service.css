@@ -826,6 +826,24 @@
   .shero__chip--2 { right: 0; }
   .shero__chip--3 { left: 0; }
   .shero__chip--4 { right: 0; }
+  .sindex__top { align-items: start; }
+  .sindex__list::before { left: -10px; }
+  .sindex__row {
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: baseline;
+    column-gap: .9rem;
+    row-gap: .55rem;
+    padding-inline: 0;
+  }
+  .sindex__no { grid-column: 1; grid-row: 1; }
+  .sindex__name { grid-column: 2; grid-row: 1; }
+  .sindex__hint {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-self: start;
+    max-width: none;
+    text-align: left;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

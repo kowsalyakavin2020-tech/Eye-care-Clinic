@@ -102,7 +102,7 @@
 }
 .tch-switch__stage {
   position: sticky; top: 13vh; align-self: start;
-  aspect-ratio: 4 / 5; border-radius: var(--r-lg); overflow: hidden;
+  aspect-ratio: 6 / 5; border-radius: var(--r-lg); overflow: hidden;
   box-shadow: var(--shadow-soft);
 }
 .tch-switch__img {
