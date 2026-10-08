@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About — Stackly Eye Care Clinic</title>
+<meta name="description" content="The people, values and milestones behind Stackly Eye Care Clinic — an ophthalmic network treating vision as an instrument worth calibrating for life.">
+<meta name="theme-color" content="#06181f">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<link rel="icon" href="../Images/logo-icon.webp" type="image/webp">
+<link rel="stylesheet" href="../CSS/home.css">
+<link rel="stylesheet" href="../CSS/about.css">
+</head>
+<body class="is-locked">
+
+<!-- ══════════════════════════════════════════════════════════════════
+     PRELOADER  (identical to the landing page)
+     ══════════════════════════════════════════════════════════════ -->
+<div class="preloader" id="preloader" role="status" aria-live="polite" aria-label="Loading Stackly">
+  <div class="preloader__shutter"><span></span><span></span></div>
+  <div class="preloader__grid"></div>
+
+  <div class="preloader__inner">
+    <div class="pl-eye">
+      <span class="pl-eye__ring"></span>
+      <span class="pl-eye__lid"><span class="pl-eye__sweep"></span></span>
+      <span class="pl-eye__iris"><i class="fa-regular fa-eye"></i></span>
+      <span class="pl-eye__pupil"></span>
+    </div>
+
+    <div class="pl-brand" aria-hidden="true">
+      <span>S</span><span>T</span><span>A</span><span>C</span><span>K</span><span>L</span><span>Y</span>
+    </div>
+
+    <div class="pl-count"><b id="plNum">0</b><sup>%</sup></div>
+
+    <div class="pl-bar"><i id="plBar"></i></div>
+
+    <div class="pl-note"><i class="fa-solid fa-circle"></i> <span id="plNote">Calibrating diagnostics</span></div>
+  </div>
+</div>
+
+<div class="cursor" id="cursor"><span class="cursor__label" id="cursorLabel">View</span></div>
+<div class="noise" aria-hidden="true"></div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     SECTION 01 — HEADER  (identical; links retargeted across pages)
+     ══════════════════════════════════════════════════════════════ -->
+<header class="hdr" id="hdr">
+  <div class="hdr__in">
+    <a class="brand" href="../index.html" data-cursor-hide>
+      <img class="brand__logo" src="../Images/logo-full.webp" alt="Stackly Eye Care Clinic">
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Primary">
+      <span class="nav__orb" id="navOrb" aria-hidden="true"></span>
+      <ul class="nav__list">
+        <li><a class="nav__link" href="../index.html#home">Home</a></li>
+        <li><a class="nav__link" href="service.html">Services</a></li>
+        <li><a class="nav__link" href="technology.html">Technology</a></li>
+        <li><a class="nav__link is-current" href="about.html">About</a></li>
+        <li><a class="nav__link" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="hdr__act">
+      <a class="hdr__tel" href="404.html" data-cursor-hide>
+        <i class="fa-solid fa-phone-volume"></i><span>+91 9764536787</span>
+      </a>
+      <a class="btn btn--iris btn--sm hdr__book" href="login.html">
+        <i class="fa-regular fa-calendar-check"></i><span>Get Started</span>
+      </a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" data-cursor-hide>
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="hdr__prog" aria-hidden="true"><i id="progBar"></i></div>
+</header>
+
+<div class="mmenu" id="mmenu" aria-hidden="true">
+  <div class="mmenu__wipe">
+    <div class="mmenu__bg" aria-hidden="true"></div>
+    <div class="mmenu__inner">
+      <div class="mmenu__head">
+        <a class="mmenu__brand" href="../index.html" data-cursor-hide>
+          <img class="brand__logo" src="../Images/logo-full.webp" alt="Stackly Eye Care Clinic">
+        </a>
+        <button class="mmenu__close" id="mmenuClose" type="button" aria-label="Close menu" data-cursor-hide>
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <ul class="mmenu__links">
+        <li><a href="../index.html#home"><em>01</em><span>Home</span><i class="fa-solid fa-arrow-right-long"></i></a></li>
+        <li><a href="service.html"><em>02</em><span>Services</span><i class="fa-solid fa-arrow-right-long"></i></a></li>
+        <li><a href="technology.html"><em>03</em><span>Technology</span><i class="fa-solid fa-arrow-right-long"></i></a></li>
+        <li><a class="is-active" href="about.html" aria-current="page"><em>04</em><span>About</span><i class="fa-solid fa-arrow-right-long"></i></a></li>
+        <li><a href="contact.html"><em>05</em><span>Contact</span><i class="fa-solid fa-arrow-right-long"></i></a></li>
+      </ul>
+      <div class="mmenu__foot">
+        <a class="btn btn--iris" href="login.html"><i class="fa-regular fa-calendar-check"></i><span>Get Started</span></a>
+        <p class="mmenu__note"><i class="fa-solid fa-shield-heart"></i> Comprehensive eye care · Same-day appointments</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main>
+
+<!-- SECTION 02 — HERO · CINEMATIC FILM FRAME -->
+<section class="abt-hero" id="abtHero">
+  <div class="abt-hero__film">
+    <img class="abt-hero__bg" src="../Images/hero-clinic.webp" alt="The Stackly clinic floor bathed in daylight">
+    <img class="abt-hero__bg2" src="../Images/hero-main.webp" alt="" aria-hidden="true">
+  </div>
+  <div class="abt-hero__scrim"></div>
+  <div class="abt-hero__grain"></div>
+  <div class="abt-hero__bars"><i></i><i></i></div>
+  <div class="abt-hero__sprockets" aria-hidden="true"></div>
+  <span class="abt-hero__bracket abt-hero__bracket--tl" aria-hidden="true"></span>
+  <span class="abt-hero__bracket abt-hero__bracket--tr" aria-hidden="true"></span>
+  <span class="abt-hero__bracket abt-hero__bracket--bl" aria-hidden="true"></span>
+  <span class="abt-hero__bracket abt-hero__bracket--br" aria-hidden="true"></span>
+
+  <div class="shell abt-hero__in">
+    <div class="abt-hero__hud">
+      <span class="abt-hero__rec"><i class="fa-solid fa-circle"></i> REC <b class="abt-hero__tc">00:00:00</b></span>
+      <span>Stackly &middot; Origin Cut &middot; Reel 01</span>
+    </div>
+
+    <h1 class="abt-hero__title">
+      <span class="abt-hero__line"><span>Human eyes,</span></span>
+      <span class="abt-hero__line abt-hero__line--iris"><span>engineered</span></span>
+      <span class="abt-hero__line abt-hero__line--out"><span>with quiet care.</span></span>
+    </h1>
+
+    <div class="abt-hero__foot">
+      <div class="abt-hero__portrait">
+        <img src="../Images/about-main.webp" alt="A clinician examining a patient's eye">
+      </div>
+      <ul class="abt-hero__facts">
+        <li><i class="fa-solid fa-eye"></i> Founded 1994</li>
+        <li><i class="fa-solid fa-location-dot"></i> Rotterdam HQ</li>
+        <li><i class="fa-solid fa-user-doctor"></i> 240 clinicians</li>
+        <li><i class="fa-solid fa-globe"></i> 22 countries</li>
+      </ul>
+      <a class="btn btn--iris" href="404.html" data-cursor-hide><i class="fa-solid fa-arrow-down"></i><span>Read our story</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 03 — STORY · CHAPTER LEDGER -->
+<section class="abt-sec abt-story" id="abtStory">
+  <div class="shell abt-story__in">
+    <div class="abt-story__index">
+      <span class="abt-kick">Our story</span>
+      <h2 class="abt-title">Built in a single <em>consulting room.</em></h2>
+      <ol class="abt-story__chapters">
+        <li class="is-on"><b>1994</b> A practice, not a factory</li>
+        <li><b>2003</b> The research wing</li>
+        <li><b>2014</b> A network takes shape</li>
+        <li><b>2024</b> Writing the standard</li>
+      </ol>
+      <div class="abt-story__stamp">
+        <img src="../Images/doc-1.webp" alt="Dr. Elin Varga, founder">
+        <span>&ldquo;Every reading starts with a conversation.&rdquo;<br>&mdash; Dr. Elin Varga, founder</span>
+      </div>
+    </div>
+
+    <div class="abt-story__body">
+      <article class="abt-story__entry">
+        <div class="abt-story__media">
+          <img src="../Images/about-detail.webp" alt="The original consulting room in 1994">
+          <span class="abt-story__curtain"></span>
+        </div>
+        <div class="abt-story__meta">
+          <time>1994</time>
+          <h3>A practice, not a factory</h3>
+          <p>Dr. Elin Varga opened one room in Rotterdam with a single promise: no patient leaves without understanding what their eyes just told us. That promise is still the whole business model.</p>
+        </div>
+      </article>
+
+      <article class="abt-story__entry">
+        <div class="abt-story__media">
+          <img src="../Images/hero-detail.webp" alt="Researchers reviewing diagnostic scans">
+          <span class="abt-story__curtain"></span>
+        </div>
+        <div class="abt-story__meta">
+          <time>2003</time>
+          <h3>The research wing</h3>
+          <p>We stopped buying instruments and started building them. A small optics lab began translating clinical questions into measuring devices &mdash; and publishing what it found, whether flattering or not.</p>
+        </div>
+      </article>
+
+      <article class="abt-story__entry">
+        <div class="abt-story__media">
+          <img src="../Images/about-second.webp" alt="A Stackly clinic in a new city">
+          <span class="abt-story__curtain"></span>
+        </div>
+        <div class="abt-story__meta">
+          <time>2014</time>
+          <h3>A network takes shape</h3>
+          <p>We began opening clinics in cities we could staff properly, at a pace set by clinicians rather than spreadsheets. London, Singapore, São Paulo, Toronto &mdash; each one built by people who had already worked in the last.</p>
+        </div>
+      </article>
+
+      <article class="abt-story__entry">
+        <div class="abt-story__media">
+          <img src="../Images/hero-inset.webp" alt="A calibration laboratory at work">
+          <span class="abt-story__curtain"></span>
+        </div>
+        <div class="abt-story__meta">
+          <time>2024</time>
+          <h3>Writing the standard</h3>
+          <p>Thirty years on, our protocols are taught in eleven teaching hospitals. We still calibrate every instrument by hand each morning, because a machine that drifts is a diagnosis that lies.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 04 — MISSION · PANORAMA WINDOW -->
+<section class="abt-sec abt-mission" id="abtMission">
+  <div class="shell">
+    <div class="abt-mission__head">
+      <span class="abt-kick">Our mission</span>
+      <h2 class="abt-title">To keep the world <em>looking forward.</em></h2>
+      <p class="abt-sub">Sight is the sense we build our whole lives on, and the one we notice last. Our mission is unglamorous and total: find the problem earlier, explain it plainly, and fix what can still be fixed.</p>
+    </div>
+
+    <div class="abt-mission__window" id="abtPanorama">
+      <div class="abt-mission__panorama">
+        <figure>
+          <img src="../Images/gal-1.webp" alt="Precision imaging equipment">
+          <figcaption>01 — Precision imaging</figcaption>
+        </figure>
+        <figure>
+          <img src="../Images/gal-2.webp" alt="A patient and clinician talking">
+          <figcaption>02 — Human-first clinics</figcaption>
+        </figure>
+        <figure>
+          <img src="../Images/gal-3.webp" alt="An open research laboratory">
+          <figcaption>03 — Open research</figcaption>
+        </figure>
+      </div>
+      <span class="abt-mission__bite"><i class="fa-solid fa-compass"></i> Scroll to pan the clinic floor</span>
+      <div class="abt-mission__rail"><i></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 05 — VALUES · VERTICAL ACCORDION -->
+<section class="abt-sec abt-values" id="abtValues">
+  <div class="shell">
+    <div class="abt-head">
+      <span class="abt-kick">What we hold</span>
+      <h2 class="abt-title">Values we can <em>actually measure.</em></h2>
+    </div>
+
+    <div class="abt-values__stack">
+      <article class="abt-val is-on">
+        <div class="abt-val__bar">
+          <span class="abt-val__no">01</span>
+          <h3>Clarity before speed</h3>
+          <i class="fa-solid fa-plus"></i>
+        </div>
+        <div class="abt-val__body">
+          <div class="abt-val__inner">
+            <p>No patient is rushed to keep a schedule on time. If a reading is ambiguous, we repeat it, explain it, and only then move on. A calm room produces better diagnostics than a fast one ever will.</p>
+            <div class="abt-val__media"><img src="../Images/svc-1.webp" alt="A calm, unhurried consultation"></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="abt-val">
+        <div class="abt-val__bar">
+          <span class="abt-val__no">02</span>
+          <h3>Evidence over opinion</h3>
+          <i class="fa-solid fa-plus"></i>
+        </div>
+        <div class="abt-val__body">
+          <div class="abt-val__inner">
+            <p>Every protocol we use is traceable to a study we are willing to name. When the evidence changes, the protocol changes. No exceptions for tradition, and none for convenience.</p>
+            <div class="abt-val__media"><img src="../Images/svc-2.webp" alt="Researchers reviewing clinical evidence"></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="abt-val">
+        <div class="abt-val__bar">
+          <span class="abt-val__no">03</span>
+          <h3>Comfort is clinical</h3>
+          <i class="fa-solid fa-plus"></i>
+        </div>
+        <div class="abt-val__body">
+          <div class="abt-val__inner">
+            <p>A relaxed eye gives a truer reading. Warm rooms, unhurried voices and no fluorescent glare are not hospitality &mdash; they are part of the measurement apparatus.</p>
+            <div class="abt-val__media"><img src="../Images/svc-3.webp" alt="A comfortable patient environment"></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="abt-val">
+        <div class="abt-val__bar">
+          <span class="abt-val__no">04</span>
+          <h3>Time is treatment</h3>
+          <i class="fa-solid fa-plus"></i>
+        </div>
+        <div class="abt-val__body">
+          <div class="abt-val__inner">
+            <p>The single most effective intervention for most sight loss is catching it earlier. Every visit, however routine, is scheduled as if it might matter. Usually it does not &mdash; and then it does.</p>
+            <div class="abt-val__media"><img src="../Images/svc-4.webp" alt="An early diagnostic appointment"></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 06 — NUMBERS · ODOMETER -->
+<section class="abt-sec abt-numbers" id="abtNumbers">
+  <div class="abt-numbers__bg"><img src="../Images/stat-1.webp" alt="" aria-hidden="true"></div>
+  <div class="shell abt-numbers__in">
+    <div class="abt-numbers__head">
+      <span class="abt-kick">By the numbers</span>
+      <h2 class="abt-title">A network, <em>quantified.</em></h2>
+    </div>
+
+    <div class="abt-odo" id="abtOdo">
+      <div class="abt-odo__item">
+        <div class="abt-odo__figure" data-value="240"><sup>+</sup></div>
+        <span>Specialist clinicians</span>
+      </div>
+      <div class="abt-odo__item">
+        <div class="abt-odo__figure" data-value="38"></div>
+        <span>Clinics worldwide</span>
+      </div>
+      <div class="abt-odo__item">
+        <div class="abt-odo__figure" data-value="96"><sup>%</sup></div>
+        <span>Would recommend us</span>
+      </div>
+      <div class="abt-odo__item">
+        <div class="abt-odo__figure" data-value="1994"></div>
+        <span>Year founded</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 07 — TRAIL · ASCENDING STEPS -->
+<section class="abt-sec abt-trail" id="abtTrail">
+  <div class="shell">
+    <div class="abt-head">
+      <span class="abt-kick">Milestones</span>
+      <h2 class="abt-title">Stepping up, <em>year after year.</em></h2>
+    </div>
+
+    <div class="abt-trail__steps" id="abtTrailSteps">
+      <article class="abt-step" style="--i:0">
+        <div class="abt-step__media"><img src="../Images/step-1.webp" alt="The first Stackly clinic"><b>1994</b></div>
+        <h3>The founding room</h3>
+        <p>One optometrist, one examination chair, one promise kept.</p>
+      </article>
+      <article class="abt-step" style="--i:1">
+        <div class="abt-step__media"><img src="../Images/step-2.webp" alt="The first research laboratory"><b>2003</b></div>
+        <h3>The research wing</h3>
+        <p>Our own lab begins publishing, and the protocols change.</p>
+      </article>
+      <article class="abt-step" style="--i:2">
+        <div class="abt-step__media"><img src="../Images/step-3.webp" alt="A Stackly clinic opening abroad"><b>2014</b></div>
+        <h3>Beyond Rotterdam</h3>
+        <p>The tenth clinic opens, built by people from the other nine.</p>
+      </article>
+      <article class="abt-step" style="--i:3">
+        <div class="abt-step__media"><img src="../Images/step-4.webp" alt="A teaching hospital using Stackly protocols"><b>2024</b></div>
+        <h3>Teaching the standard</h3>
+        <p>Thirty years of notes become a curriculum for others.</p>
+      </article>
+      <span class="abt-trail__path" aria-hidden="true"><i></i></span>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 08 — TEAM · CONTACT SHEET -->
+<section class="abt-sec abt-team" id="abtTeam">
+  <div class="shell">
+    <div class="abt-head">
+      <span class="abt-kick">The people</span>
+      <h2 class="abt-title">The hands behind <em>the optics.</em></h2>
+    </div>
+
+    <div class="abt-roster">
+      <article class="abt-roster__row">
+        <span class="abt-roster__no">01</span>
+        <div class="abt-roster__who"><b>Dr. Elin Varga</b><span>Founder &amp; Chief Surgeon</span></div>
+        <div class="abt-roster__thumb"><img src="../Images/doc-1.webp" alt="Dr. Elin Varga"></div>
+        <a class="abt-roster__arrow" href="404.html" aria-label="View profile"><i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+      <article class="abt-roster__row">
+        <span class="abt-roster__no">02</span>
+        <div class="abt-roster__who"><b>Dr. Noah Andersen</b><span>Head of Diagnostics</span></div>
+        <div class="abt-roster__thumb"><img src="../Images/doc-2.webp" alt="Dr. Noah Andersen"></div>
+        <a class="abt-roster__arrow" href="404.html" aria-label="View profile"><i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+      <article class="abt-roster__row">
+        <span class="abt-roster__no">03</span>
+        <div class="abt-roster__who"><b>Dr. Priya Raman</b><span>Director of Research</span></div>
+        <div class="abt-roster__thumb"><img src="../Images/doc-3.webp" alt="Dr. Priya Raman"></div>
+        <a class="abt-roster__arrow" href="404.html" aria-label="View profile"><i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+      <article class="abt-roster__row">
+        <span class="abt-roster__no">04</span>
+        <div class="abt-roster__who"><b>Dr. Lucas Meyer</b><span>Head of Surgical Care</span></div>
+        <div class="abt-roster__thumb"><img src="../Images/doc-4.webp" alt="Dr. Lucas Meyer"></div>
+        <a class="abt-roster__arrow" href="404.html" aria-label="View profile"><i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 08 — APPROACH · MASK WINDOW PAN -->
+<section class="abt-sec abt-approach" id="abtApproach">
+  <div class="shell abt-approach__in">
+    <div class="abt-approach__copy">
+      <span class="abt-kick">How we work</span>
+      <h2 class="abt-title">A visit that reads <em>between the lines.</em></h2>
+      <p class="abt-sub">Every appointment follows the same unhurried arc, whether you are here for a routine check or a second opinion.</p>
+      <ul class="abt-approach__list">
+        <li><i class="fa-regular fa-circle-check"></i><span><b>Listen first.</b> We ask what changed before we look at anything &mdash; the history is half the diagnosis.</span></li>
+        <li><i class="fa-regular fa-circle-check"></i><span><b>Measure twice.</b> Each reading is taken twice on calibrated instruments before we trust it.</span></li>
+        <li><i class="fa-regular fa-circle-check"></i><span><b>Explain plainly.</b> You see your own scans, on your own screen, in plain language.</span></li>
+        <li><i class="fa-regular fa-circle-check"></i><span><b>Follow through</b> with a written plan and a named clinician you can reach again.</span></li>
+      </ul>
+      <a class="btn btn--iris" href="404.html" data-cursor-hide><i class="fa-regular fa-calendar-check"></i><span>Book a visit</span></a>
+    </div>
+
+    <div class="abt-approach__stage">
+      <div class="abt-approach__mask" id="abtMask">
+        <img class="abt-approach__img" src="../Images/about-second.webp" alt="A clinician at work in the examination room">
+      </div>
+      <span class="abt-approach__hint">Scroll</span>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 08 — VOICES · WORD HIGHLIGHT -->
+<section class="abt-sec abt-voices" id="abtVoices">
+  <div class="abt-voices__bg"><img src="../Images/quote-bg.webp" alt="" aria-hidden="true"></div>
+  <div class="shell abt-voices__in">
+    <span class="abt-kick">In their words</span>
+    <blockquote class="abt-voices__quote" id="abtQuote" data-quote="For twenty years Stackly has treated my family's eyes like their own. I have never once felt like a number in a waiting room.">For twenty years Stackly has treated my family's eyes like their own. I have never once felt like a number in a waiting room.</blockquote>
+    <div class="abt-voices__who">
+      <img src="../Images/avatar-1.webp" alt="Marta Hendriks">
+      <div><b>Marta Hendriks</b><span>Patient since 2004</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 08 — CULTURE · ASSEMBLING MOSAIC -->
+<section class="abt-sec abt-culture" id="abtCulture">
+  <div class="shell">
+    <div class="abt-head">
+      <span class="abt-kick">Clinic culture</span>
+      <h2 class="abt-title">Calm rooms, <em>sharp minds.</em></h2>
+    </div>
+
+    <div class="abt-mosaic" id="abtMosaic">
+      <figure><img src="../Images/gal-4.webp" alt="A quiet waiting area"><figcaption>Waiting in comfort</figcaption></figure>
+      <figure><img src="../Images/gal-5.webp" alt="An examination in progress"><figcaption>Care in motion</figcaption></figure>
+      <figure><img src="../Images/gal-6.webp" alt="A sterilised instrument tray"><figcaption>Kept sterile</figcaption></figure>
+      <figure><img src="../Images/gal-7.webp" alt="A clinician at a workstation"><figcaption>Reading results</figcaption></figure>
+      <figure><img src="../Images/gal-8.webp" alt="A bright, open corridor"><figcaption>Open at every step</figcaption></figure>
+      <figure><img src="../Images/hero-detail.webp" alt="Morning calibration of equipment"><figcaption>Calibrating the morning</figcaption></figure>
+      <figure><img src="../Images/about-detail.webp" alt="The team in conversation"><figcaption>The team, together</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 08 — RECOGNITION · CABINET SHELF -->
+<section class="abt-sec abt-recog" id="abtRecog">
+  <div class="shell">
+    <div class="abt-head">
+      <span class="abt-kick">Recognition</span>
+      <h2 class="abt-title">On the shelf, <em>earned.</em></h2>
+    </div>
+
+    <div class="abt-cabinet">
+      <div class="abt-shelf">
+        <article class="abt-plaque">
+          <div class="abt-plaque__award"><img src="../Images/trust-badge.webp" alt="European Optics Award"><b>1999</b></div>
+          <div class="abt-plaque__cap">European Optics Award<small>first ISO-certified lens lab</small></div>
+        </article>
+        <article class="abt-plaque">
+          <div class="abt-plaque__award"><img src="../Images/stat-1.webp" alt="Clinical Excellence Award"><b>2009</b></div>
+          <div class="abt-plaque__cap">Clinical Excellence<small>European Ophthalmic Society</small></div>
+        </article>
+        <article class="abt-plaque">
+          <div class="abt-plaque__award"><img src="../Images/stat-2.webp" alt="Research Prize"><b>2016</b></div>
+          <div class="abt-plaque__cap">Open Research Prize<small>published diagnostics dataset</small></div>
+        </article>
+        <article class="abt-plaque">
+          <div class="abt-plaque__award"><img src="../Images/treat-1.webp" alt="Patient Choice Award"><b>2021</b></div>
+          <div class="abt-plaque__cap">Patient Choice<small>highest rated clinic network</small></div>
+        </article>
+      </div>
+
+      <div class="abt-shelf">
+        <article class="abt-plaque">
+          <div class="abt-plaque__award"><img src="../Images/treat-2.webp" alt="Teaching Accreditation"><b>2022</b></div>
+          <div class="abt-plaque__cap">Teaching Accreditation<small>eleven teaching hospitals</small></div>
+        </article>
+        <article class="abt-plaque">
+          <div class="abt-plaque__award"><img src="../Images/treat-3.webp" alt="Sustainability Mark"><b>2023</b></div>
+          <div class="abt-plaque__cap">Sustainability Mark<small>carbon-neutral clinics</small></div>
+        </article>
+        <article class="abt-plaque">
+          <div class="abt-plaque__award"><img src="../Images/tech-2.webp" alt="Innovation Medal"><b>2024</b></div>
+          <div class="abt-plaque__cap">Diagnostics Innovation<small>for handheld imaging</small></div>
+        </article>
+        <article class="abt-plaque">
+          <div class="abt-plaque__award"><img src="../Images/tech-3.webp" alt="Lifetime Achievement"><b>2024</b></div>
+          <div class="abt-plaque__cap">Lifetime Achievement<small>Dr. Elin Varga, founder</small></div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 12 — CTA · POSTCARD -->
+<section class="abt-sec abt-cta" id="abtCta">
+  <div class="shell">
+    <div class="abt-postcard">
+      <div class="abt-postcard__copy">
+        <span class="abt-kick">Say hello</span>
+        <h2 class="abt-title">Come see what <em>clear looks like.</em></h2>
+        <p class="abt-sub">Book a visit at any of our thirty-eight clinics, or simply write to us with a question. A real clinician answers, every time.</p>
+        <div class="abt-postcard__acts">
+<a class="btn btn--iris" href="404.html" data-cursor-hide><i class="fa-regular fa-calendar-check"></i><span>Book your visit</span></a>
+    <a class="btn btn--ghost" href="404.html" data-cursor-hide><i class="fa-solid fa-arrow-right"></i><span>Explore services</span></a>
+        </div>
+      </div>
+      <div class="abt-postcard__media">
+        <img src="../Images/hero-inset.webp" alt="A patient during an eye examination">
+        <span class="abt-postcard__stamp"><img src="../Images/logo-icon.webp" alt="">Stackly<br>1994</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     SECTION — FOOTER  (identical; links retargeted)
+     ══════════════════════════════════════════════════════════════ -->
+<footer class="ftr" id="contact">
+  <div class="ftr__eyeshape" data-reveal>
+    <img src="../Images/footer-map.webp" alt="Stackly locations worldwide">
+    <span class="ftr__eyeveil"></span>
+    <div class="ftr__eyetext">
+      <i class="fa-solid fa-location-dot"></i>
+      <b>38 clinics · 22 countries</b>
+      <em>Rotterdam · London · Singapore · São Paulo · Toronto</em>
+    </div>
+  </div>
+
+  <div class="shell ftr__grid">
+    <div class="ftr__brand">
+      <a class="ftr__lock" href="../index.html" aria-label="Stackly Eye Care Clinic — home"><img class="ftr__logo" src="../Images/logo-full.webp" alt="Stackly Eye Care Clinic"></a>
+      <p>An ophthalmic network that treats vision as an instrument worth
+        calibrating for life. Founded 1994, Rotterdam.</p>
+      <div class="ftr__social">
+        <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="404.html" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="404.html" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+
+    <nav class="ftr__col" data-reveal>
+      <h4>Company</h4>
+      <a href="../index.html#home">Home</a>
+      <a href="service.html">Services</a>
+      <a href="technology.html">Technology</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <nav class="ftr__col" data-reveal data-aos="fade-up" data-aos-delay="80">
+      <h4>Visit us</h4>
+      <span class="ftr__addr"><i class="fa-solid fa-location-dot"></i> MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008</span>
+      <a href="404.html"><i class="fa-regular fa-envelope"></i> info@stackly.com</a>
+      <a href="404.html"><i class="fa-solid fa-phone"></i> +91 9764536787</a>
+    </nav>
+
+    <div class="ftr__col ftr__col--form" data-reveal data-aos="fade-up" data-aos-delay="160">
+      <h4>Vision notes</h4>
+      <p>A quiet monthly letter on eye health, research and clinic openings.</p>
+      <form class="nl" id="nlForm" novalidate>
+        <input type="email" placeholder="Your email address" aria-label="Email address" autocomplete="email">
+        <button type="submit" aria-label="Subscribe" data-cursor-hide><i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+      <p class="nl-msg" id="nlMsg" role="status" aria-live="polite"></p>
+      <div class="ftr__contact">
+        <span><i class="fa-regular fa-clock"></i> Mon–Sat · 08:00–20:00</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="shell ftr__base">
+    <p>&copy; 2022 Stackly. All rights reserved.</p>
+    <ul>
+      <li><a href="404.html">Privacy</a></li>
+      <li><a href="404.html">Terms</a></li>
+      <li><a href="404.html">Cookies</a></li>
+      <li><a href="404.html">Accessibility</a></li>
+    </ul>
+    <p class="ftr__built"><i class="fa-solid fa-eye"></i> Crafted for the Stackly theme</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../JS/home.js"></script>
+<script src="../JS/about.js"></script>
+</body>
+</html>

@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Services — Stackly Eye Care Clinic</title>
+<meta name="description" content="Ten specialist ophthalmic disciplines from Stackly Eye Care Clinic — diagnostics, refractive surgery, lens architecture, paediatric and retina care, delivered with instrument-grade precision.">
+<meta name="theme-color" content="#06181f">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<link rel="icon" href="../Images/logo-icon.webp" type="image/webp">
+<link rel="stylesheet" href="../CSS/home.css">
+<link rel="stylesheet" href="../CSS/service.css">
+</head>
+<body class="is-locked">
+
+<!-- ══════════════════════════════════════════════════════════════════
+     PRELOADER  (identical to the landing page)
+     ══════════════════════════════════════════════════════════════ -->
+<div class="preloader" id="preloader" role="status" aria-live="polite" aria-label="Loading Stackly">
+  <div class="preloader__shutter"><span></span><span></span></div>
+  <div class="preloader__grid"></div>
+
+  <div class="preloader__inner">
+    <div class="pl-eye">
+      <span class="pl-eye__ring"></span>
+      <span class="pl-eye__lid"><span class="pl-eye__sweep"></span></span>
+      <span class="pl-eye__iris"><i class="fa-regular fa-eye"></i></span>
+      <span class="pl-eye__pupil"></span>
+    </div>
+
+    <div class="pl-brand" aria-hidden="true">
+      <span>S</span><span>T</span><span>A</span><span>C</span><span>K</span><span>L</span><span>Y</span>
+    </div>
+
+    <div class="pl-count"><b id="plNum">0</b><sup>%</sup></div>
+
+    <div class="pl-bar"><i id="plBar"></i></div>
+
+    <div class="pl-note"><i class="fa-solid fa-circle"></i> <span id="plNote">Calibrating diagnostics</span></div>
+  </div>
+</div>
+
+<div class="cursor" id="cursor"><span class="cursor__label" id="cursorLabel">View</span></div>
+<div class="noise" aria-hidden="true"></div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     SECTION 01 — HEADER  (identical; links retargeted across pages)
+     ══════════════════════════════════════════════════════════════ -->
+<header class="hdr" id="hdr">
+  <div class="hdr__in">
+    <a class="brand" href="../index.html" data-cursor-hide>
+      <img class="brand__logo" src="../Images/logo-full.webp" alt="Stackly Eye Care Clinic">
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Primary">
+      <span class="nav__orb" id="navOrb" aria-hidden="true"></span>
+      <ul class="nav__list">
+        <li><a class="nav__link" href="../index.html#home">Home</a></li>
+        <li><a class="nav__link is-current" href="service.html">Services</a></li>
+        <li><a class="nav__link" href="technology.html">Technology</a></li>
+        <li><a class="nav__link" href="about.html">About</a></li>
+        <li><a class="nav__link" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="hdr__act">
+      <a class="hdr__tel" href="404.html" data-cursor-hide>
+        <i class="fa-solid fa-phone-volume"></i><span>+91 9764536787</span>
+      </a>
+      <a class="btn btn--iris btn--sm hdr__book" href="login.html">
+        <i class="fa-regular fa-calendar-check"></i><span>Get Started</span>
+      </a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" data-cursor-hide>
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="hdr__prog" aria-hidden="true"><i id="progBar"></i></div>
+</header>
+
+<div class="mmenu" id="mmenu" aria-hidden="true">
+  <div class="mmenu__wipe">
+    <div class="mmenu__bg" aria-hidden="true"></div>
+    <div class="mmenu__inner">
+      <div class="mmenu__head">
+        <a class="mmenu__brand" href="../index.html" data-cursor-hide>
+          <img class="brand__logo" src="../Images/logo-full.webp" alt="Stackly Eye Care Clinic">
+        </a>
+        <button class="mmenu__close" id="mmenuClose" type="button" aria-label="Close menu" data-cursor-hide>
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <ul class="mmenu__links">
+        <li><a href="../index.html#home"><em>01</em><span>Home</span><i class="fa-solid fa-arrow-right-long"></i></a></li>
+        <li><a class="is-active" href="service.html" aria-current="page"><em>02</em><span>Services</span><i class="fa-solid fa-arrow-right-long"></i></a></li>
+        <li><a href="technology.html"><em>03</em><span>Technology</span><i class="fa-solid fa-arrow-right-long"></i></a></li>
+        <li><a href="about.html"><em>04</em><span>About</span><i class="fa-solid fa-arrow-right-long"></i></a></li>
+        <li><a href="contact.html"><em>05</em><span>Contact</span><i class="fa-solid fa-arrow-right-long"></i></a></li>
+      </ul>
+      <div class="mmenu__foot">
+        <a class="btn btn--iris" href="login.html"><i class="fa-regular fa-calendar-check"></i><span>Get Started</span></a>
+        <p class="mmenu__note"><i class="fa-solid fa-shield-heart"></i> Comprehensive eye care · Same-day appointments</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main>
+
+<!-- SECTION 02 — HERO · IRIS APERTURE -->
+<section class="shero" id="svcHero">
+  <div class="shero__bg" aria-hidden="true">
+    <img src="../Images/hero-clinic.webp" alt="">
+    <span class="shero__veil"></span>
+    <span class="shero__grid"></span>
+  </div>
+
+  <div class="shell shero__in">
+    <div class="shero__copy">
+      <span class="shero__kicker"><i class="fa-solid fa-eye"></i> Our services &middot; 10 disciplines</span>
+
+      <h1 class="shero__title">
+        <span class="shero__line"><span>Vision care,</span></span>
+        <span class="shero__line"><span>calibrated to</span></span>
+        <span class="shero__line"><span>your <em>own eyes.</em></span></span>
+      </h1>
+
+      <p class="lead shero__sub">
+        Each discipline is a dedicated suite, a dedicated team and a measurement
+        protocol you can read line by line &mdash; because no two eyes deserve the same plan.
+      </p>
+
+      <div class="shero__cta">
+        <a class="btn btn--iris" href="404.html">
+          <i class="fa-regular fa-calendar-check"></i> Book an examination
+        </a>
+        <a class="btn btn--ghost" href="404.html">
+          <i class="fa-solid fa-arrow-down"></i> Browse the directory
+        </a>
+      </div>
+
+      <ul class="shero__meta">
+        <li><i class="fa-solid fa-microscope"></i><div><b>41</b><span>Diagnostics</span></div></li>
+        <li><i class="fa-solid fa-user-doctor"></i><div><b>340</b><span>Specialists</span></div></li>
+        <li><i class="fa-solid fa-earth-europe"></i><div><b>22</b><span>Countries</span></div></li>
+      </ul>
+    </div>
+
+    <div class="shero__deck">
+      <span class="shero__glow" aria-hidden="true"></span>
+      <span class="shero__ring" aria-hidden="true"></span>
+      <span class="shero__ring shero__ring--b" aria-hidden="true"></span>
+      <span class="shero__ring shero__ring--c" aria-hidden="true"></span>
+      <span class="shero__orbit" aria-hidden="true"><b></b><b></b><b></b><b></b></span>
+
+      <div class="shero__iris">
+        <img src="../Images/hero-main.webp" alt="Ophthalmologist examining a patient with a slit lamp">
+      </div>
+
+      <div class="shero__chips" aria-hidden="true">
+        <span class="shero__chip shero__chip--1"><i class="fa-solid fa-wand-magic-sparkles"></i> LASIK</span>
+        <span class="shero__chip shero__chip--2"><i class="fa-solid fa-glasses"></i> Lens design</span>
+        <span class="shero__chip shero__chip--3"><i class="fa-solid fa-fingerprint"></i> Iris mapping</span>
+        <span class="shero__chip shero__chip--4"><i class="fa-solid fa-child-reaching"></i> Paediatric</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 03 — SERVICE INDEX · CURSOR LENS -->
+<section class="sband sindex" id="svcIndex">
+  <div class="shell">
+    <div class="sindex__top">
+      <div class="s-head">
+        <span class="eyebrow">Service directory</span>
+        <h2 class="d-xl">Choose the discipline your eyes actually need.</h2>
+      </div>
+      <p class="lead">
+        Six core programmes, each with its own suite and sub-specialists. Hover a row
+        to preview the room before you ever step inside it.
+      </p>
+    </div>
+
+    <ul class="sindex__list">
+      <li class="sindex__row" data-img="../Images/svc-1.webp" data-cap="Examination suite">
+        <span class="sindex__no">01</span>
+        <span class="sindex__name">Comprehensive Eye Examination</span>
+        <span class="sindex__hint">Baseline mapping of every structure <i class="fa-solid fa-arrow-right"></i></span>
+      </li>
+      <li class="sindex__row" data-img="../Images/svc-2.webp" data-cap="Laser theatre">
+        <span class="sindex__no">02</span>
+        <span class="sindex__name">LASIK &amp; Refractive Surgery</span>
+        <span class="sindex__hint">Bladeless correction under 0.001&nbsp;mm <i class="fa-solid fa-arrow-right"></i></span>
+      </li>
+      <li class="sindex__row" data-img="../Images/svc-3.webp" data-cap="Optical atelier">
+        <span class="sindex__no">03</span>
+        <span class="sindex__name">Lens &amp; Frame Architecture</span>
+        <span class="sindex__hint">Hand-finished optics, engineered per frame <i class="fa-solid fa-arrow-right"></i></span>
+      </li>
+      <li class="sindex__row" data-img="../Images/svc-4.webp" data-cap="Fitting lounge">
+        <span class="sindex__no">04</span>
+        <span class="sindex__name">Contact Lens Fitting</span>
+        <span class="sindex__hint">Oxygen-flow fitted to your cornea <i class="fa-solid fa-arrow-right"></i></span>
+      </li>
+      <li class="sindex__row" data-img="../Images/svc-5.webp" data-cap="Paediatric wing">
+        <span class="sindex__no">05</span>
+        <span class="sindex__name">Paediatric Vision Care</span>
+        <span class="sindex__hint">Play-led testing for growing eyes <i class="fa-solid fa-arrow-right"></i></span>
+      </li>
+      <li class="sindex__row" data-img="../Images/svc-6.webp" data-cap="Retina &amp; glaucoma">
+        <span class="sindex__no">06</span>
+        <span class="sindex__name">Retina &amp; Glaucoma Care</span>
+        <span class="sindex__hint">Pressure and perfusion monitored for life <i class="fa-solid fa-arrow-right"></i></span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="sindex__lens" aria-hidden="true">
+    <img src="../Images/svc-1.webp" alt="">
+    <span></span>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     SECTION 04 — CARE PILLARS (3D flip deck)
+     ══════════════════════════════════════════════════════════════ -->
+<section class="sband sflip" id="svcPillars">
+  <div class="shell">
+    <div class="s-head s-head--center">
+      <span class="s-kick">Care pillars</span>
+      <h2 class="s-title">Four pillars under<br>every single plan.</h2>
+      <p class="s-sub">Whatever the discipline, every Stackly pathway is built on the same four commitments. Turn a card to see what it means.</p>
+    </div>
+
+    <div class="sflip__grid" id="svcFlip">
+      <div class="sflip__cell">
+        <article class="sflip__card" tabindex="0">
+          <div class="sflip__face sflip__face--front">
+            <span class="sflip__num">01</span>
+            <img src="../Images/doc-1.webp" alt="Clinician reviewing diagnostic scans">
+            <div class="sflip__front"><i class="fa-solid fa-magnifying-glass-chart"></i><b>Diagnose</b></div>
+          </div>
+          <div class="sflip__face sflip__face--back">
+            <h4>Diagnose</h4>
+            <p>Every plan starts with measurement, never assumption.</p>
+            <ul>
+              <li><i class="fa-solid fa-check"></i> point intake scan</li>
+              <li><i class="fa-solid fa-check"></i> Retinal imaging baseline</li>
+              <li><i class="fa-solid fa-check"></i> Second-clinician review</li>
+            </ul>
+            <a class="sflip__more" href="404.html">Explore <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="sflip__cell">
+        <article class="sflip__card" tabindex="0">
+          <div class="sflip__face sflip__face--front">
+            <span class="sflip__num">02</span>
+            <img src="../Images/doc-2.webp" alt="Specialist reviewing refractive imaging">
+            <div class="sflip__front"><i class="fa-solid fa-bullseye"></i><b>Correct</b></div>
+          </div>
+          <div class="sflip__face sflip__face--back">
+            <h4>Correct</h4>
+            <p>Refractive accuracy down to a single micron, per eye.</p>
+            <ul>
+              <li><i class="fa-solid fa-check"></i> Wavefront-guided planning</li>
+              <li><i class="fa-solid fa-check"></i> Bladeless laser platform</li>
+              <li><i class="fa-solid fa-check"></i> Same-day recovery protocol</li>
+            </ul>
+            <a class="sflip__more" href="404.html">Explore <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+      <div class="sflip__cell">
+        <article class="sflip__card" tabindex="0">
+          <div class="sflip__face sflip__face--front">
+            <span class="sflip__num">03</span>
+            <img src="../Images/doc-3.webp" alt="Optometrist fitting lenses">
+            <div class="sflip__front"><i class="fa-solid fa-glasses"></i><b>Design</b></div>
+          </div>
+          <div class="sflip__face sflip__face--back">
+            <h4>Design</h4>
+            <p>Lenses and frames engineered around your face, not a catalogue.</p>
+            <ul>
+              <li><i class="fa-solid fa-check"></i> 3D facial mapping</li>
+              <li><i class="fa-solid fa-check"></i> Hand-finished optics</li>
+              <li><i class="fa-solid fa-check"></i> point frame fitting</li>
+            </ul>
+            <a class="sflip__more" href="404.html">Explore <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+      <div class="sflip__cell">
+        <article class="sflip__card" tabindex="0">
+          <div class="sflip__face sflip__face--front">
+            <span class="sflip__num">04</span>
+            <img src="../Images/doc-4.webp" alt="Patient at a follow-up consultation">
+            <div class="sflip__front"><i class="fa-solid fa-shield-heart"></i><b>Protect</b></div>
+          </div>
+          <div class="sflip__face sflip__face--back">
+            <h4>Protect</h4>
+            <p>Long-horizon monitoring so small changes never become big ones.</p>
+            <ul>
+              <li><i class="fa-solid fa-check"></i> Annual retina imaging</li>
+              <li><i class="fa-solid fa-check"></i> Pressure &amp; field tracking</li>
+              <li><i class="fa-solid fa-check"></i> Family history screening</li>
+            </ul>
+            <a class="sflip__more" href="404.html">Explore <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 05 — VISION LAB (parallax columns) -->
+<section class="sband scols" id="svcCols">
+  <div class="shell">
+    <div class="scols__head">
+      <div class="s-head">
+        <span class="s-kick">Vision lab</span>
+        <h2 class="s-title">A lab shaped around your field of view.</h2>
+      </div>
+      <p class="lead">Twelve imaging suites, each purpose-built — from corneal topography to widefield retinal capture. Scroll slowly; the columns move the way a scan does.</p>
+    </div>
+
+    <div class="scols__wrap">
+      <div class="scols__col">
+        <figure class="scols__fig">
+          <img src="../Images/treat-1.webp" alt="Corneal topography suite">
+          <figcaption><i class="fa-solid fa-diagram-project"></i> Topography suite</figcaption>
+        </figure>
+        <figure class="scols__fig">
+          <img src="../Images/gal-1.webp" alt="Diagnostic imaging station">
+          <figcaption><i class="fa-solid fa-wave-square"></i> Wavefront analysis</figcaption>
+        </figure>
+      </div>
+      <div class="scols__col">
+        <figure class="scols__fig">
+          <img src="../Images/treat-2.webp" alt="Refraction lane">
+          <figcaption><i class="fa-solid fa-ruler-combined"></i> Refraction lane</figcaption>
+        </figure>
+        <figure class="scols__fig">
+          <img src="../Images/gal-3.webp" alt="Retinal imaging chamber">
+          <figcaption><i class="fa-solid fa-camera-retro"></i> Retinal capture</figcaption>
+        </figure>
+      </div>
+      <div class="scols__col">
+        <figure class="scols__fig">
+          <img src="../Images/treat-3.webp" alt="Lens finishing workshop">
+          <figcaption><i class="fa-solid fa-screwdriver-wrench"></i> Lens workshop</figcaption>
+        </figure>
+        <figure class="scols__fig">
+          <img src="../Images/gal-5.webp" alt="Consultation room">
+          <figcaption><i class="fa-solid fa-comments"></i> Consult room</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="scols__note" aria-hidden="true">
+      <b>24</b><span>Sub-specialties</span>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 06 — PRECISION (compare slider) -->
+<section class="sband scmp" id="svcPrecision">
+  <div class="shell">
+    <div class="scmp__head">
+      <span class="s-kick">Precision</span>
+      <h2 class="s-title">See the difference before you decide.</h2>
+      <p class="lead">Drag the handle across the same eye, twelve weeks apart. This is the clarity our refractive patients describe — measured, not promised.</p>
+    </div>
+
+    <div class="scmp__stage" id="svcCompare">
+      <span class="scmp__img scmp__img--after"><img src="../Images/gal-8.webp" alt="Corrected vision after treatment"></span>
+      <span class="scmp__img scmp__img--before"><img src="../Images/gal-7.webp" alt="Vision before treatment"></span>
+      <span class="scmp__tag scmp__tag--l">Before</span>
+      <span class="scmp__tag scmp__tag--r">After</span>
+      <span class="scmp__handle" aria-hidden="true"><i class="fa-solid fa-left-right"></i></span>
+      <input class="scmp__range" type="range" min="0" max="100" value="50" aria-label="Reveal the corrected view">
+    </div>
+
+    <ul class="scmp__foot">
+      <li><i class="fa-solid fa-check"></i> Same eye · 12 weeks apart</li>
+      <li><i class="fa-solid fa-check"></i> No enhancement required</li>
+      <li><i class="fa-solid fa-check"></i> Verified at 3 follow-ups</li>
+    </ul>
+  </div>
+</section>
+
+<!-- SECTION 07 — PROTOCOL (expanding panels) -->
+<section class="sband sexp" id="svcProtocol">
+  <div class="shell">
+    <div class="sexp__head">
+      <span class="s-kick">Protocol</span>
+      <h2 class="s-title">Five movements from first look to lifetime care.</h2>
+      <p class="lead">Every discipline follows the same choreography. Hover a stage to open it; the sequence never skips a step.</p>
+    </div>
+
+    <div class="sexp__row" id="svcPanels">
+      <article class="sexp__panel is-on" tabindex="0">
+        <img src="../Images/step-1.webp" alt="Intake consultation">
+        <span class="sexp__badge"><i class="fa-solid fa-clipboard-check"></i></span>
+        <div class="sexp__label">
+          <span class="no">Step 01</span>
+          <h3>Intake &amp; history</h3>
+          <p class="sexp__desc">A structured conversation and a full medical, family and lifestyle history — the context every scan needs.</p>
+        </div>
+      </article>
+      <article class="sexp__panel" tabindex="0">
+        <img src="../Images/step-2.webp" alt="Diagnostic imaging">
+        <span class="sexp__badge"><i class="fa-solid fa-microscope"></i></span>
+        <div class="sexp__label">
+          <span class="no">Step 02</span>
+          <h3>Diagnose</h3>
+          <p class="sexp__desc">Forty-one measurements across cornea, lens, retina and pressure, reviewed by two clinicians.</p>
+        </div>
+      </article>
+      <article class="sexp__panel" tabindex="0">
+        <img src="../Images/step-3.webp" alt="Treatment planning">
+        <span class="sexp__badge"><i class="fa-solid fa-route"></i></span>
+        <div class="sexp__label">
+          <span class="no">Step 03</span>
+          <h3>Plan</h3>
+          <p class="sexp__desc">A written pathway with options, timelines and costs — no procedure begins without your sign-off.</p>
+        </div>
+      </article>
+      <article class="sexp__panel" tabindex="0">
+        <img src="../Images/step-4.webp" alt="Treatment delivery">
+        <span class="sexp__badge"><i class="fa-solid fa-hand-holding-medical"></i></span>
+        <div class="sexp__label">
+          <span class="no">Step 04</span>
+          <h3>Treat</h3>
+          <p class="sexp__desc">Delivered by the same specialist who planned it, in a suite built for that single discipline.</p>
+        </div>
+      </article>
+      <article class="sexp__panel" tabindex="0">
+        <img src="../Images/tech-1.webp" alt="Follow-up monitoring">
+        <span class="sexp__badge"><i class="fa-solid fa-arrows-rotate"></i></span>
+        <div class="sexp__label">
+          <span class="no">Step 05</span>
+          <h3>Protect</h3>
+          <p class="sexp__desc">Scheduled reviews and lifetime imaging so we notice the smallest change early.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     SECTION 08 — MILESTONES (centre timeline)
+     ══════════════════════════════════════════════════════════════ -->
+<section class="sband stl" id="svcMilestones">
+  <div class="shell">
+    <div class="stl__head">
+      <span class="s-kick">Milestones</span>
+      <h2 class="s-title">Three decades, measured in clarity.</h2>
+      <p class="s-sub">From one Rotterdam consulting room to a network of 38 clinics — every milestone began with a better way to see.</p>
+    </div>
+
+    <div class="stl__track" id="svcTimeline">
+      <span class="stl__rail" aria-hidden="true"></span>
+      <span class="stl__fill" aria-hidden="true"></span>
+
+      <article class="stl__item">
+        <div class="stl__media"><img src="../Images/about-main.webp" alt="The original Stackly consulting room"></div>
+        <div class="stl__body">
+          <span class="stl__year">1994</span>
+          <h3>The first consulting room</h3>
+          <p>Founded in Rotterdam with a single slit lamp, one specialist and a stubborn belief that diagnosis should come before treatment.</p>
+          <ul class="stl__tags"><li>Rotterdam</li><li>Diagnostics</li></ul>
+        </div>
+        <span class="stl__dot" aria-hidden="true"></span>
+      </article>
+
+      <article class="stl__item">
+        <div class="stl__media"><img src="../Images/gal-2.webp" alt="Refractive laser theatre opening"></div>
+        <div class="stl__body">
+          <span class="stl__year">2003</span>
+          <h3>Refractive programme opens</h3>
+          <p>The first bladeless laser theatre joins the network, turning micron-level planning into everyday refractive surgery.</p>
+          <ul class="stl__tags"><li>LASIK</li><li>Refractive</li></ul>
+        </div>
+        <span class="stl__dot" aria-hidden="true"></span>
+      </article>
+
+      <article class="stl__item">
+        <div class="stl__media"><img src="../Images/about-second.webp" alt="Imaging suite with advanced equipment"></div>
+        <div class="stl__body">
+          <span class="stl__year">2012</span>
+          <h3>Imaging at scale</h3>
+          <p>Widefield retinal capture and corneal topography roll out across every clinic, standardising 41 measurements worldwide.</p>
+          <ul class="stl__tags"><li>Retina</li><li>Topography</li></ul>
+        </div>
+        <span class="stl__dot" aria-hidden="true"></span>
+      </article>
+
+      <article class="stl__item">
+        <div class="stl__media"><img src="../Images/gal-4.webp" alt="Paediatric vision wing"></div>
+        <div class="stl__body">
+          <span class="stl__year">2021</span>
+          <h3>Paediatric wings &amp; 22 countries</h3>
+          <p>Play-led paediatric testing arrives with our 38th clinic, taking the network to twenty-two countries and 340 specialists.</p>
+          <ul class="stl__tags"><li>Paediatric</li><li>Global</li></ul>
+        </div>
+        <span class="stl__dot" aria-hidden="true"></span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 09 — MOSAIC (spotlight grid) -->
+<section class="sband smos" id="svcMosaicSection">
+  <div class="shell">
+    <div class="smos__head">
+      <span class="s-kick">Inside the clinic</span>
+      <h2 class="s-title">A closer look at where care happens.</h2>
+      <p class="s-sub">Every discipline has its own room, its own light and its own instruments. Hover to bring one into focus.</p>
+    </div>
+
+    <div class="smos__grid" id="svcMosaic">
+      <figure class="smos__tile smos__tile--a">
+        <img src="../Images/tech-2.webp" alt="Optical coherence tomography console">
+        <figcaption><i class="fa-solid fa-wave-square"></i> OCT console</figcaption>
+      </figure>
+      <figure class="smos__tile smos__tile--b">
+        <img src="../Images/tech-3.webp" alt="Laser calibration bench">
+        <figcaption><i class="fa-solid fa-bullseye"></i> Laser bench</figcaption>
+      </figure>
+      <figure class="smos__tile smos__tile--c">
+        <img src="../Images/gal-6.webp" alt="Consultation room detail">
+        <figcaption><i class="fa-solid fa-comments"></i> Consult room</figcaption>
+      </figure>
+      <figure class="smos__tile smos__tile--d">
+        <img src="../Images/tech-4.webp" alt="Precision lens instrument">
+        <figcaption><i class="fa-solid fa-glasses"></i> Lens lab</figcaption>
+      </figure>
+      <figure class="smos__tile smos__tile--e">
+        <img src="../Images/cta-1.webp" alt="Specialist preparing an examination">
+        <figcaption><i class="fa-solid fa-user-doctor"></i> Specialist prep</figcaption>
+      </figure>
+      <figure class="smos__tile smos__tile--f">
+        <img src="../Images/hero-inset.webp" alt="A patient during an eye examination">
+        <figcaption><i class="fa-solid fa-heart-pulse"></i> Patient care</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 10 — INSIGHTS (magazine overlap) -->
+<section class="sband smag" id="svcMag">
+  <div class="shell smag__in">
+    <div class="smag__stack">
+      <div class="smag__main"><img src="../Images/about-detail.webp" alt="Close-up of diagnostic equipment"></div>
+      <div class="smag__over"><img src="../Images/avatar-1.webp" alt="Lead clinician portrait"></div>
+    </div>
+
+    <div class="smag__body">
+      <span class="s-kick">Insights</span>
+      <h2 class="s-title">What our specialists refuse to compromise on.</h2>
+      <blockquote class="smag__quote">"If a measurement is doubtful, we repeat it. There is no appointment short enough to justify a guess."</blockquote>
+      <ul class="smag__list">
+        <li><i class="fa-solid fa-circle-check"></i><span><b>Two clinicians, every scan.</b> Every diagnosis is reviewed before it reaches you.</span></li>
+        <li><i class="fa-solid fa-circle-check"></i><span><b>Written pathways.</b> You leave with options, timelines and costs in writing.</span></li>
+        <li><i class="fa-solid fa-circle-check"></i><span><b>Lifetime imaging.</b> Subtle changes are caught years before they matter.</span></li>
+      </ul>
+      <a class="btn btn--iris" href="404.html">
+        <i class="fa-regular fa-calendar-check"></i> Talk to a specialist
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 11 — SIGNATURE (closing band) -->
+<section class="scta" id="svcCta">
+  <div class="scta__bg" aria-hidden="true">
+    <img src="../Images/hero-detail.webp" alt="">
+    <span class="scta__veil"></span>
+  </div>
+
+  <div class="shell scta__in">
+    <span class="scta__eyebrow s-kick">Signature care</span>
+    <h2 class="scta__title">
+      <span class="scta__line"><span>Your eyes deserve</span></span>
+      <span class="scta__line"><span>a <em>dedicated</em> team.</span></span>
+    </h2>
+    <div class="scta__cta">
+      <a class="btn btn--iris" href="404.html">
+        <i class="fa-regular fa-calendar-check"></i> Book an examination
+      </a>
+    </div>
+    <div class="scta__chips">
+      <a href="404.html"><i class="fa-regular fa-envelope"></i> info@stackly.com</a>
+      <a href="404.html"><i class="fa-solid fa-phone"></i> +91 9764536787</a>
+      <a href="404.html"><i class="fa-solid fa-location-dot"></i> 38 clinics worldwide</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     SECTION 12 — FOOTER  (identical; links retargeted)
+     ══════════════════════════════════════════════════════════════ -->
+<footer class="ftr" id="contact">
+  <div class="ftr__eyeshape" data-reveal>
+    <img src="../Images/footer-map.webp" alt="Stackly locations worldwide">
+    <span class="ftr__eyeveil"></span>
+    <div class="ftr__eyetext">
+      <i class="fa-solid fa-location-dot"></i>
+      <b>38 clinics · 22 countries</b>
+      <em>Rotterdam · London · Singapore · São Paulo · Toronto</em>
+    </div>
+  </div>
+
+  <div class="shell ftr__grid">
+    <div class="ftr__brand">
+      <a class="ftr__lock" href="../index.html" aria-label="Stackly Eye Care Clinic — home"><img class="ftr__logo" src="../Images/logo-full.webp" alt="Stackly Eye Care Clinic"></a>
+      <p>An ophthalmic network that treats vision as an instrument worth
+        calibrating for life. Founded 1994, Rotterdam.</p>
+      <div class="ftr__social">
+        <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="404.html" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="404.html" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+
+    <nav class="ftr__col" data-reveal>
+      <h4>Company</h4>
+      <a href="../index.html#home">Home</a>
+      <a href="service.html">Services</a>
+      <a href="technology.html">Technology</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <nav class="ftr__col" data-reveal data-aos="fade-up" data-aos-delay="80">
+      <h4>Visit us</h4>
+      <span class="ftr__addr"><i class="fa-solid fa-location-dot"></i> MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008</span>
+      <a href="404.html"><i class="fa-regular fa-envelope"></i> info@stackly.com</a>
+      <a href="404.html"><i class="fa-solid fa-phone"></i> +91 9764536787</a>
+    </nav>
+
+    <div class="ftr__col ftr__col--form" data-reveal data-aos="fade-up" data-aos-delay="160">
+      <h4>Vision notes</h4>
+      <p>A quiet monthly letter on eye health, research and clinic openings.</p>
+      <form class="nl" id="nlForm" novalidate>
+        <input type="email" placeholder="Your email address" aria-label="Email address" autocomplete="email">
+        <button type="submit" aria-label="Subscribe" data-cursor-hide><i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+      <p class="nl-msg" id="nlMsg" role="status" aria-live="polite"></p>
+      <div class="ftr__contact">
+        <span><i class="fa-regular fa-clock"></i> Mon–Sat · 08:00–20:00</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="shell ftr__base">
+    <p>&copy; 2022 Stackly. All rights reserved.</p>
+    <ul>
+      <li><a href="404.html">Privacy</a></li>
+      <li><a href="404.html">Terms</a></li>
+      <li><a href="404.html">Cookies</a></li>
+      <li><a href="404.html">Accessibility</a></li>
+    </ul>
+    <p class="ftr__built"><i class="fa-solid fa-eye"></i> Crafted for the Stackly theme</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../JS/home.js"></script>
+<script src="../JS/service.js"></script>
+</body>
+</html>

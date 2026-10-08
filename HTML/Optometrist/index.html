@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" data-dash-role="optometrist">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Stackly Eye Care Clinic — optometrist clinical dashboard.">
+<title>Stackly — Optometrist Dashboard</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="icon" href="../../Images/logo-icon.webp" type="image/webp">
+<link rel="stylesheet" href="../../CSS/dashboard.css">
+</head>
+<body>
+
+<div class="scrim" id="dashScrim"></div>
+
+<div class="dash">
+  <aside class="side" id="dashSide" aria-hidden="false">
+    <div class="side__brand">
+      <a href="index.html" aria-label="Stackly home"><img src="../../Images/logo-full.webp" alt="Stackly Eye Care Clinic"></a>
+      <button class="side__close" id="dashSideClose" type="button" aria-label="Close menu"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+    </div>
+
+    <span class="side__role" id="dashRole">Optometrist · Clinical</span>
+
+    <nav class="side__nav" id="dashNav" aria-label="Dashboard sections"></nav>
+
+    <div class="side__user">
+      <span class="su-avatar" id="dashAvatar">A</span>
+      <div>
+        <strong id="dashName">Loading…</strong>
+        <span id="dashEmail">—</span>
+      </div>
+    </div>
+
+    <div class="side__out">
+      <button class="logout" id="dashLogout" type="button"><i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true"></i>Sign out</button>
+    </div>
+  </aside>
+
+  <div class="dash__main">
+    <header class="topbar">
+      <div class="tb-lead">
+        <button class="burger" id="dashBurger" type="button" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+        <div class="tb-title">
+          <h2 id="dashTitle">Overview</h2>
+          <p id="dashWelcome">Welcome back</p>
+        </div>
+      </div>
+
+      <div class="tb-search">
+        <div class="tb-search__box" id="dashSearchBox">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          <input id="dashSearch" type="search" placeholder="Search patients, exams, prescriptions…" aria-label="Search">
+        </div>
+      </div>
+
+      <div class="tb-right">
+        <a class="bell" id="dashBell" href="../404.html" aria-label="Notifications"><i class="fa-solid fa-bell" aria-hidden="true"></i><span class="bell__dot"></span></a>
+        <div class="tb-user">
+          <span class="tb-avatar" id="dashAvatarB">A</span>
+          <div>
+            <strong id="dashNameB">Loading…</strong>
+            <span id="dashEmailB">—</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="dash__body">
+      <div id="dashView"></div>
+    </main>
+  </div>
+</div>
+
+<div class="toasts" id="dashToasts" aria-live="polite"></div>
+
+<script src="../../JS/dashboard.js"></script>
+</body>
+</html>

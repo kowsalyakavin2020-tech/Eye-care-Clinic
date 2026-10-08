@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Stackly Eye Care Clinic</title>
+<meta name="description" content="Talk to Stackly Eye Care Clinic — call, write or visit any of our clinics. Book a visit, ask a clinical question or find us in Rotterdam.">
+<meta name="theme-color" content="#06181f">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<link rel="icon" href="../Images/logo-icon.webp" type="image/webp">
+<link rel="stylesheet" href="../CSS/home.css">
+<link rel="stylesheet" href="../CSS/contact.css">
+</head>
+<body class="is-locked">
+
+<!-- ══════════════════════════════════════════════════════════════════
+     PRELOADER  (identical to the landing page)
+     ══════════════════════════════════════════════════════════════ -->
+<div class="preloader" id="preloader" role="status" aria-live="polite" aria-label="Loading Stackly">
+  <div class="preloader__shutter"><span></span><span></span></div>
+  <div class="preloader__grid"></div>
+
+  <div class="preloader__inner">
+    <div class="pl-eye">
+      <span class="pl-eye__ring"></span>
+      <span class="pl-eye__lid"><span class="pl-eye__sweep"></span></span>
+      <span class="pl-eye__iris"><i class="fa-regular fa-eye"></i></span>
+      <span class="pl-eye__pupil"></span>
+    </div>
+
+    <div class="pl-brand" aria-hidden="true">
+      <span>S</span><span>T</span><span>A</span><span>C</span><span>K</span><span>L</span><span>Y</span>
+    </div>
+
+    <div class="pl-count"><b id="plNum">0</b><sup>%</sup></div>
+
+    <div class="pl-bar"><i id="plBar"></i></div>
+
+    <div class="pl-note"><i class="fa-solid fa-circle"></i> <span id="plNote">Calibrating diagnostics</span></div>
+  </div>
+</div>
+
+<div class="cursor" id="cursor"><span class="cursor__label" id="cursorLabel">View</span></div>
+<div class="noise" aria-hidden="true"></div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     SECTION 01 — HEADER  (identical; links retargeted across pages)
+     ══════════════════════════════════════════════════════════════ -->
+<header class="hdr" id="hdr">
+  <div class="hdr__in">
+    <a class="brand" href="../index.html" data-cursor-hide>
+      <img class="brand__logo" src="../Images/logo-full.webp" alt="Stackly Eye Care Clinic">
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Primary">
+      <span class="nav__orb" id="navOrb" aria-hidden="true"></span>
+      <ul class="nav__list">
+        <li><a class="nav__link" href="../index.html#home">Home</a></li>
+        <li><a class="nav__link" href="service.html">Services</a></li>
+        <li><a class="nav__link" href="technology.html">Technology</a></li>
+        <li><a class="nav__link" href="about.html">About</a></li>
+        <li><a class="nav__link is-current" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="hdr__act">
+      <a class="hdr__tel" href="404.html" data-cursor-hide>
+        <i class="fa-solid fa-phone-volume"></i><span>+91 9764536787</span>
+      </a>
+      <a class="btn btn--iris btn--sm hdr__book" href="login.html">
+        <i class="fa-regular fa-calendar-check"></i><span>Get Started</span>
+      </a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" data-cursor-hide>
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="hdr__prog" aria-hidden="true"><i id="progBar"></i></div>
+</header>
+
+<div class="mmenu" id="mmenu" aria-hidden="true">
+  <div class="mmenu__wipe">
+    <div class="mmenu__bg" aria-hidden="true"></div>
+    <div class="mmenu__inner">
+      <div class="mmenu__head">
+        <a class="mmenu__brand" href="../index.html" data-cursor-hide>
+          <img class="brand__logo" src="../Images/logo-full.webp" alt="Stackly Eye Care Clinic">
+        </a>
+        <button class="mmenu__close" id="mmenuClose" type="button" aria-label="Close menu" data-cursor-hide>
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <ul class="mmenu__links">
+        <li><a href="../index.html#home"><em>01</em><span>Home</span><i class="fa-solid fa-arrow-right-long"></i></a></li>
+        <li><a href="service.html"><em>02</em><span>Services</span><i class="fa-solid fa-arrow-right-long"></i></a></li>
+        <li><a href="technology.html"><em>03</em><span>Technology</span><i class="fa-solid fa-arrow-right-long"></i></a></li>
+        <li><a href="about.html"><em>04</em><span>About</span><i class="fa-solid fa-arrow-right-long"></i></a></li>
+        <li><a class="is-active" href="contact.html" aria-current="page"><em>05</em><span>Contact</span><i class="fa-solid fa-arrow-right-long"></i></a></li>
+      </ul>
+      <div class="mmenu__foot">
+        <a class="btn btn--iris" href="login.html"><i class="fa-regular fa-calendar-check"></i><span>Get Started</span></a>
+        <p class="mmenu__note"><i class="fa-solid fa-shield-heart"></i> Comprehensive eye care · Same-day appointments</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main>
+
+<!-- SECTION 02 — HERO · OPEN CHANNEL -->
+<section class="ctc-hero" id="ctcHero">
+  <div class="ctc-hero__glow" aria-hidden="true"></div>
+
+  <div class="shell ctc-hero__in">
+    <div class="ctc-hero__copy">
+      <span class="ctc-kick"><i class="fa-regular fa-comments"></i> Open channel</span>
+      <h1 class="ctc-hero__title">
+        <span class="ctc-w">Let's</span> <span class="ctc-w">talk</span> <span class="ctc-w">about</span>
+        <span class="ctc-w">your</span> <span class="ctc-w"><em>eyes.</em></span>
+      </h1>
+      <p class="ctc-hero__sub">Call, write or walk in. A real member of the clinic answers every message &mdash; usually within a couple of minutes, always within one working day.</p>
+      <div class="ctc-hero__acts">
+        <a class="ctc-chip" href="404.html" data-cursor-hide><i class="fa-solid fa-phone-volume"></i><span>+91 9764536787</span></a>
+        <a class="ctc-chip" href="404.html" data-cursor-hide><i class="fa-regular fa-envelope"></i><span>info@stackly.com</span></a>
+      </div>
+      <div class="ctc-hero__meta">
+        <span class="ctc-hero__status"><i class="fa-solid fa-circle"></i> Clinic is open now</span>
+        <span><i class="fa-regular fa-clock"></i> Mon&ndash;Sat &middot; 08:00&ndash;20:00</span>
+      </div>
+    </div>
+
+    <div class="ctc-hero__visual">
+      <div class="ctc-hero__frame">
+        <img src="../Images/hero-clinic.webp" alt="The Stackly clinic reception">
+      </div>
+      <div class="ctc-hero__rings" aria-hidden="true"><i></i><i></i><i></i></div>
+      <span class="ctc-hero__badge" aria-hidden="true"><i class="fa-solid fa-comment-dots"></i></span>
+      <div class="ctc-float ctc-float--a">
+        <img src="../Images/avatar-2.webp" alt="">
+        <div><b>~2 min</b><span>Average reply</span></div>
+      </div>
+      <div class="ctc-float ctc-float--b">
+        <img src="../Images/cta-1.webp" alt="">
+        <div><b>Same week</b><span>Appointments</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 03 — CHANNELS -->
+<section class="ctc-sec ctc-channels" id="ctcChannels">
+  <div class="shell">
+    <div class="ctc-head">
+      <span class="ctc-kick"><i class="fa-solid fa-diagram-project"></i> Three ways in</span>
+      <h2 class="ctc-title">Pick the <em>channel</em> that suits you.</h2>
+    </div>
+
+    <div class="ctc-chan__grid">
+      <article class="ctc-chan">
+        <div class="ctc-chan__media">
+          <img src="../Images/svc-1.webp" alt="Calling the clinic">
+          <span class="ctc-chan__num">01</span>
+          <span class="ctc-chan__icon"><i class="fa-solid fa-phone-volume"></i></span>
+        </div>
+        <div class="ctc-chan__body">
+          <h3>Call the desk</h3>
+          <p>Speak to a coordinator between 08:00 and 20:00, six days a week. Urgent calls are triaged the moment they ring.</p>
+          <a class="ctc-chan__link" href="404.html" data-cursor-hide>+91 9764536787 <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="ctc-chan">
+        <div class="ctc-chan__media">
+          <img src="../Images/svc-2.webp" alt="Writing an email to the clinic">
+          <span class="ctc-chan__num">02</span>
+          <span class="ctc-chan__icon"><i class="fa-regular fa-envelope"></i></span>
+        </div>
+        <div class="ctc-chan__body">
+          <h3>Write it down</h3>
+          <p>Send a note with photos of your prescription or a question for a clinician. We reply in writing, same language.</p>
+          <a class="ctc-chan__link" href="404.html" data-cursor-hide>info@stackly.com <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="ctc-chan">
+        <div class="ctc-chan__media">
+          <img src="../Images/svc-3.webp" alt="Walking into the clinic">
+          <span class="ctc-chan__num">03</span>
+          <span class="ctc-chan__icon"><i class="fa-solid fa-location-dot"></i></span>
+        </div>
+        <div class="ctc-chan__body">
+          <h3>Walk on in</h3>
+          <p>Every clinic keeps two walk-in chairs free each hour. No appointment needed for a quick check.</p>
+          <a class="ctc-chan__link" href="404.html" data-cursor-hide>Find a clinic <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 04 — MAP -->
+<section class="ctc-sec ctc-map" id="ctcMap">
+  <div class="shell">
+    <div class="ctc-head">
+      <span class="ctc-kick"><i class="fa-solid fa-map-location-dot"></i> Find us</span>
+      <h2 class="ctc-title">On the quay, in <em>Rotterdam.</em></h2>
+      <p class="ctc-sub">Drop a pin and come by &mdash; or let the map bring you straight to the door.</p>
+    </div>
+
+    <div class="ctc-map__shell">
+      <span class="ctc-map__hint"><i class="fa-solid fa-eye"></i> Stackly Eye Care Clinic</span>
+      <div class="ctc-map__frame">
+        <iframe title="Stackly Eye Care Clinic location on the map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3907.1616097152896!2d78.1739798!3d11.682956599999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babefef7fd970bb%3A0xe11aef1a71994f9!2sStackly!5e0!3m2!1sen!2sin!4v1791360600863!5m2!1sen!2sin"
+          loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      </div>
+    <div class="ctc-map__card">
+      <img src="../Images/treat-1.webp" alt="The Stackly clinic building">
+      <div>
+        <b>Stackly Eye Care Clinic</b>
+        <span><i class="fa-solid fa-location-dot"></i> MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008</span>
+        <span><i class="fa-regular fa-clock"></i> Mon&ndash;Sat &middot; 08:00&ndash;20:00</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 05 — LOCATIONS -->
+<section class="ctc-sec ctc-loc" id="ctcLoc">
+  <div class="shell">
+    <div class="ctc-head">
+      <span class="ctc-kick"><i class="fa-solid fa-globe"></i> Other clinics</span>
+      <h2 class="ctc-title">Thirty-eight doors, <em>one standard.</em></h2>
+    </div>
+
+    <div class="ctc-loc__grid">
+      <article class="ctc-loc__tile">
+        <img src="../Images/gal-1.webp" alt="Stackly clinic in London">
+        <img class="ctc-loc__alt" src="../Images/gal-2.webp" alt="" aria-hidden="true">
+        <span class="ctc-loc__veil"></span>
+        <div class="ctc-loc__panel">
+          <div class="ctc-loc__name">London</div>
+          <div class="ctc-loc__meta"><i class="fa-solid fa-location-dot"></i> 9 Harley Rise, W1<br><i class="fa-regular fa-clock"></i> 08:00&ndash;20:00</div>
+        </div>
+      </article>
+
+      <article class="ctc-loc__tile">
+        <img src="../Images/gal-3.webp" alt="Stackly clinic in Singapore">
+        <img class="ctc-loc__alt" src="../Images/gal-4.webp" alt="" aria-hidden="true">
+        <span class="ctc-loc__veil"></span>
+        <div class="ctc-loc__panel">
+          <div class="ctc-loc__name">Singapore</div>
+          <div class="ctc-loc__meta"><i class="fa-solid fa-location-dot"></i> 21 Orchard Link<br><i class="fa-regular fa-clock"></i> 09:00&ndash;21:00</div>
+        </div>
+      </article>
+
+      <article class="ctc-loc__tile">
+        <img src="../Images/gal-5.webp" alt="Stackly clinic in São Paulo">
+        <img class="ctc-loc__alt" src="../Images/gal-6.webp" alt="" aria-hidden="true">
+        <span class="ctc-loc__veil"></span>
+        <div class="ctc-loc__panel">
+          <div class="ctc-loc__name">São Paulo</div>
+          <div class="ctc-loc__meta"><i class="fa-solid fa-location-dot"></i> Av. Paulista 1400<br><i class="fa-regular fa-clock"></i> 08:00&ndash;19:00</div>
+        </div>
+      </article>
+
+      <article class="ctc-loc__tile">
+        <img src="../Images/gal-7.webp" alt="Stackly clinic in Toronto">
+        <img class="ctc-loc__alt" src="../Images/gal-8.webp" alt="" aria-hidden="true">
+        <span class="ctc-loc__veil"></span>
+        <div class="ctc-loc__panel">
+          <div class="ctc-loc__name">Toronto</div>
+          <div class="ctc-loc__meta"><i class="fa-solid fa-location-dot"></i> 40 King West, M5H<br><i class="fa-regular fa-clock"></i> 08:00&ndash;20:00</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 06 — FORM -->
+<section class="ctc-sec ctc-form" id="ctcFormSec">
+  <div class="shell ctc-form__in">
+    <div class="ctc-form__aside">
+      <span class="ctc-kick"><i class="fa-regular fa-paper-plane"></i> Send a note</span>
+      <div class="ctc-form__photo">
+        <img src="../Images/about-main.webp" alt="A clinician ready to help">
+        <div class="ctc-form__blinds" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+      <ul class="ctc-form__promise">
+        <li><i class="fa-solid fa-check"></i> A real clinician replies &mdash; never a bot.</li>
+        <li><i class="fa-solid fa-check"></i> Your details stay inside the clinic.</li>
+        <li><i class="fa-solid fa-check"></i> Urgent? Call and we triage the same day.</li>
+      </ul>
+    </div>
+
+    <form class="ctc-form__fields" id="ctcForm" novalidate>
+      <div class="ctc-form__row">
+        <div class="ctc-field">
+          <label for="ctcName">Your name</label>
+          <div class="ctc-field__ctrl">
+            <input id="ctcName" name="name" type="text" autocomplete="name" placeholder="Jordan Rivera">
+            <span class="ctc-field__line"></span>
+          </div>
+          <p class="ctc-field__err"><i class="fa-solid fa-circle-exclamation"></i><span></span></p>
+        </div>
+        <div class="ctc-field">
+          <label for="ctcEmail">Email ID</label>
+          <div class="ctc-field__ctrl">
+            <input id="ctcEmail" name="email" type="email" autocomplete="email" placeholder="you@email.com">
+            <span class="ctc-field__line"></span>
+          </div>
+          <p class="ctc-field__err"><i class="fa-solid fa-circle-exclamation"></i><span></span></p>
+        </div>
+      </div>
+
+      <div class="ctc-form__row">
+        <div class="ctc-field">
+          <label for="ctcPhone">Mobile number</label>
+          <div class="ctc-field__ctrl">
+            <input id="ctcPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="10-digit Indian mobile, e.g. 98765 43210">
+            <span class="ctc-field__line"></span>
+          </div>
+          <p class="ctc-field__err"><i class="fa-solid fa-circle-exclamation"></i><span></span></p>
+        </div>
+        <div class="ctc-field">
+          <label for="ctcSubject">Topic</label>
+          <div class="ctc-field__ctrl">
+            <select id="ctcSubject" name="subject">
+              <option value="">Select a topic</option>
+              <option value="Book an appointment">Book an appointment</option>
+              <option value="Ask a clinical question">Ask a clinical question</option>
+              <option value="Billing &amp; records">Billing &amp; records</option>
+              <option value="Careers at Stackly">Careers at Stackly</option>
+            </select>
+            <span class="ctc-field__line"></span>
+          </div>
+          <p class="ctc-field__err"><i class="fa-solid fa-circle-exclamation"></i><span></span></p>
+        </div>
+      </div>
+
+      <div class="ctc-field">
+        <label for="ctcMsg">Message</label>
+        <div class="ctc-field__ctrl">
+          <textarea id="ctcMsg" name="message" rows="4" placeholder="Tell us what you need..."></textarea>
+          <span class="ctc-field__line"></span>
+        </div>
+        <p class="ctc-field__err"><i class="fa-solid fa-circle-exclamation"></i><span></span></p>
+      </div>
+
+      <div class="ctc-form__foot">
+        <span class="ctc-form__note">We reply within one working day.</span>
+        <button class="ctc-send" type="submit"><span>Send message</span> <i class="fa-solid fa-paper-plane"></i></button>
+      </div>
+      <p class="ctc-form__msg" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- SECTION 07 — DEPARTMENTS -->
+<section class="ctc-sec ctc-dept" id="ctcDept">
+  <div class="shell ctc-dept__in">
+    <div>
+      <span class="ctc-kick"><i class="fa-solid fa-user-doctor"></i> Departments</span>
+      <h2 class="ctc-title">Reach the right <em>desk.</em></h2>
+      <div class="ctc-tabs">
+        <div class="ctc-tab is-on" data-title="General optometry" data-desc="Everyday sight tests, prescriptions and lenses, plus contact-lens fitting.">
+          <span class="ctc-tab__no">01</span><h3>General optometry</h3>
+          <span class="ctc-tab__arrow"><i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+        <div class="ctc-tab" data-title="Surgical care" data-desc="Cataract, laser and retinal surgery, with a named surgeon through the whole pathway.">
+          <span class="ctc-tab__no">02</span><h3>Surgical care</h3>
+          <span class="ctc-tab__arrow"><i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+        <div class="ctc-tab" data-title="Diagnostics" data-desc="OCT, retinal imaging and visual-field testing, read the same day by our imaging team.">
+          <span class="ctc-tab__no">03</span><h3>Diagnostics</h3>
+          <span class="ctc-tab__arrow"><i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+        <div class="ctc-tab" data-title="Paediatric care" data-desc="Gentle, unhurried eye care for children, from first check-ups to vision therapy.">
+          <span class="ctc-tab__no">04</span><h3>Paediatric care</h3>
+          <span class="ctc-tab__arrow"><i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ctc-dept__view">
+      <img class="is-on" src="../Images/svc-5.webp" alt="General optometry">
+      <img src="../Images/svc-6.webp" alt="Surgical care">
+      <img src="../Images/tech-1.webp" alt="Diagnostics">
+      <img src="../Images/treat-2.webp" alt="Paediatric care">
+      <div class="ctc-dept__cap">
+        <h3>General optometry</h3>
+        <p>Everyday sight tests, prescriptions and lenses, plus contact-lens fitting &mdash; the front door to everything else we do.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 08 — FAQ -->
+<section class="ctc-sec ctc-faq" id="ctcFaq">
+  <div class="shell">
+    <div class="ctc-head">
+      <span class="ctc-kick"><i class="fa-regular fa-circle-question"></i> Good to know</span>
+      <h2 class="ctc-title">Questions, <em>answered.</em></h2>
+    </div>
+
+    <div class="ctc-faq__rail">
+      <article class="ctc-faq__panel is-on">
+        <div class="ctc-faq__bg"><img src="../Images/gal-7.webp" alt=""></div>
+        <span class="ctc-faq__veil"></span>
+        <span class="ctc-faq__label">Do I need a referral?</span>
+        <div class="ctc-faq__content">
+          <i class="fa-solid fa-question"></i>
+          <h3>Do I need a referral?</h3>
+          <p>No. Book a routine appointment directly and we will handle any onward referral internally if you need one.</p>
+        </div>
+      </article>
+
+      <article class="ctc-faq__panel">
+        <div class="ctc-faq__bg"><img src="../Images/gal-8.webp" alt=""></div>
+        <span class="ctc-faq__veil"></span>
+        <span class="ctc-faq__label">How fast is a reply?</span>
+        <div class="ctc-faq__content">
+          <i class="fa-solid fa-bolt"></i>
+          <h3>How fast is a reply?</h3>
+          <p>Calls are answered live in clinic hours. Written messages get a reply from a clinician within one working day.</p>
+        </div>
+      </article>
+
+      <article class="ctc-faq__panel">
+        <div class="ctc-faq__bg"><img src="../Images/hero-detail.webp" alt=""></div>
+        <span class="ctc-faq__veil"></span>
+        <span class="ctc-faq__label">What should I bring?</span>
+        <div class="ctc-faq__content">
+          <i class="fa-solid fa-glasses"></i>
+          <h3>What should I bring?</h3>
+          <p>Your current glasses or lenses, a list of medicines, and any previous scans if you have them. That is all.</p>
+        </div>
+      </article>
+
+      <article class="ctc-faq__panel">
+        <div class="ctc-faq__bg"><img src="../Images/about-detail.webp" alt=""></div>
+        <span class="ctc-faq__veil"></span>
+        <span class="ctc-faq__label">Do you take insurance?</span>
+        <div class="ctc-faq__content">
+          <i class="fa-solid fa-shield-heart"></i>
+          <h3>Do you take insurance?</h3>
+          <p>Yes &mdash; we work with most major insurers and can invoice directly. Bring your policy details and we do the rest.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 09 — HOURS -->
+<section class="ctc-sec ctc-hours" id="ctcHours">
+  <div class="shell ctc-hours__in">
+    <div>
+      <span class="ctc-kick"><i class="fa-regular fa-clock"></i> Opening hours</span>
+      <h2 class="ctc-title">We keep <em>clinic time.</em></h2>
+      <p class="ctc-sub">Hover a day to find it on the dial. Every clinic runs the same hours in its own time zone.</p>
+      <ul class="ctc-hours__list">
+        <li class="ctc-hours__row is-open" data-angle="-154"><span class="ctc-hours__day">Monday</span><span class="ctc-hours__time">08:00 &ndash; 20:00</span></li>
+        <li class="ctc-hours__row is-open" data-angle="-103"><span class="ctc-hours__day">Tuesday</span><span class="ctc-hours__time">08:00 &ndash; 20:00</span></li>
+        <li class="ctc-hours__row is-open" data-angle="-51"><span class="ctc-hours__day">Wednesday</span><span class="ctc-hours__time">08:00 &ndash; 20:00</span></li>
+        <li class="ctc-hours__row is-open" data-angle="0"><span class="ctc-hours__day">Thursday</span><span class="ctc-hours__time">08:00 &ndash; 20:00</span></li>
+        <li class="ctc-hours__row is-open" data-angle="51"><span class="ctc-hours__day">Friday</span><span class="ctc-hours__time">08:00 &ndash; 18:00</span></li>
+        <li class="ctc-hours__row is-open" data-angle="103"><span class="ctc-hours__day">Saturday</span><span class="ctc-hours__time">09:00 &ndash; 15:00</span></li>
+        <li class="ctc-hours__row" data-angle="154"><span class="ctc-hours__day">Sunday</span><span class="ctc-hours__time">Closed</span></li>
+      </ul>
+    </div>
+
+    <div class="ctc-dial">
+      <div class="ctc-dial__bg"><img src="../Images/hero-detail.webp" alt=""></div>
+      <span class="ctc-dial__ticks" aria-hidden="true"></span>
+      <span class="ctc-dial__arc" aria-hidden="true"></span>
+      <span class="ctc-dial__face" aria-hidden="true"></span>
+      <span class="ctc-dial__hand ctc-dial__hand--h" aria-hidden="true"></span>
+      <span class="ctc-dial__hand ctc-dial__hand--m" aria-hidden="true"></span>
+      <span class="ctc-dial__hand ctc-dial__hand--s" aria-hidden="true"></span>
+      <span class="ctc-dial__pin" aria-hidden="true"></span>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 10 — SOCIAL -->
+<section class="ctc-sec ctc-social" id="ctcSocial">
+  <div class="shell">
+    <div class="ctc-head">
+      <span class="ctc-kick"><i class="fa-solid fa-hashtag"></i> Community</span>
+      <h2 class="ctc-title">Follow the <em>clinic.</em></h2>
+    </div>
+
+    <div class="ctc-stamps">
+      <a class="ctc-stamp" href="404.html" data-cursor-hide>
+        <img src="../Images/gal-6.webp" alt="Stackly on Instagram">
+        <span class="ctc-stamp__tag"><i class="fa-brands fa-instagram"></i> Instagram</span>
+      </a>
+      <a class="ctc-stamp" href="404.html" data-cursor-hide>
+        <img src="../Images/gal-8.webp" alt="Stackly on LinkedIn">
+        <span class="ctc-stamp__tag"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</span>
+      </a>
+      <a class="ctc-stamp" href="404.html" data-cursor-hide>
+        <img src="../Images/treat-3.webp" alt="Stackly on YouTube">
+        <span class="ctc-stamp__tag"><i class="fa-brands fa-youtube"></i> YouTube</span>
+      </a>
+      <a class="ctc-stamp" href="404.html" data-cursor-hide>
+        <img src="../Images/tech-4.webp" alt="Stackly on X">
+        <span class="ctc-stamp__tag"><i class="fa-brands fa-x-twitter"></i> X</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 11 — TICKET -->
+<section class="ctc-sec ctc-ticket-sec" id="ctcTicket">
+  <div class="shell">
+    <div class="ctc-ticket">
+      <div class="ctc-ticket__main">
+        <span class="ctc-kick"><i class="fa-solid fa-ticket"></i> Your visit</span>
+        <h2 class="ctc-title">Reserve a chair in <em>under a minute.</em></h2>
+        <p class="ctc-sub">Tell us when suits you and we will hold the slot. No card needed to book &mdash; ever.</p>
+        <div class="ctc-ticket__acts">
+<a class="btn btn--iris" href="404.html" data-cursor-hide><i class="fa-regular fa-calendar-check"></i><span>Book an appointment</span></a>
+<a class="btn btn--ghost" href="404.html" data-cursor-hide><i class="fa-solid fa-phone"></i><span>Call instead</span></a>
+        </div>
+      </div>
+
+      <div class="ctc-ticket__stub">
+        <span class="ctc-ticket__notch ctc-ticket__notch--t" aria-hidden="true"></span>
+        <span class="ctc-ticket__notch ctc-ticket__notch--b" aria-hidden="true"></span>
+        <span class="ctc-ticket__code">STK-2026-ROT</span>
+        <div class="ctc-ticket__photo"><img src="../Images/hero-inset.webp" alt="A patient during an eye examination"></div>
+        <div class="ctc-ticket__barcode" aria-hidden="true">
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
+        <span class="ctc-ticket__code">Admit one</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     SECTION 12 — FOOTER  (identical; links retargeted)
+     ══════════════════════════════════════════════════════════════ -->
+<footer class="ftr" id="contact">
+  <div class="ftr__eyeshape" data-reveal>
+    <img src="../Images/footer-map.webp" alt="Stackly locations worldwide">
+    <span class="ftr__eyeveil"></span>
+    <div class="ftr__eyetext">
+      <i class="fa-solid fa-location-dot"></i>
+      <b>38 clinics · 22 countries</b>
+      <em>Rotterdam · London · Singapore · São Paulo · Toronto</em>
+    </div>
+  </div>
+
+  <div class="shell ftr__grid">
+    <div class="ftr__brand">
+      <a class="ftr__lock" href="../index.html" aria-label="Stackly Eye Care Clinic — home"><img class="ftr__logo" src="../Images/logo-full.webp" alt="Stackly Eye Care Clinic"></a>
+      <p>An ophthalmic network that treats vision as an instrument worth
+        calibrating for life. Founded 1994, Rotterdam.</p>
+      <div class="ftr__social">
+        <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="404.html" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="404.html" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+
+    <nav class="ftr__col" data-reveal>
+      <h4>Company</h4>
+      <a href="../index.html#home">Home</a>
+      <a href="service.html">Services</a>
+      <a href="technology.html">Technology</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <nav class="ftr__col" data-reveal data-aos="fade-up" data-aos-delay="80">
+      <h4>Visit us</h4>
+      <span class="ftr__addr"><i class="fa-solid fa-location-dot"></i> MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008</span>
+      <a href="404.html"><i class="fa-regular fa-envelope"></i> info@stackly.com</a>
+      <a href="404.html"><i class="fa-solid fa-phone"></i> +91 9764536787</a>
+    </nav>
+
+    <div class="ftr__col ftr__col--form" data-reveal data-aos="fade-up" data-aos-delay="160">
+      <h4>Vision notes</h4>
+      <p>A quiet monthly letter on eye health, research and clinic openings.</p>
+      <form class="nl" id="nlForm" novalidate>
+        <input type="email" placeholder="Your email address" aria-label="Email address" autocomplete="email">
+        <button type="submit" aria-label="Subscribe" data-cursor-hide><i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+      <p class="nl-msg" id="nlMsg" role="status" aria-live="polite"></p>
+      <div class="ftr__contact">
+        <span><i class="fa-regular fa-clock"></i> Mon–Sat · 08:00–20:00</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="shell ftr__base">
+    <p>&copy; 2022 Stackly. All rights reserved.</p>
+    <ul>
+      <li><a href="404.html">Privacy</a></li>
+      <li><a href="404.html">Terms</a></li>
+      <li><a href="404.html">Cookies</a></li>
+      <li><a href="404.html">Accessibility</a></li>
+    </ul>
+    <p class="ftr__built"><i class="fa-solid fa-eye"></i> Crafted for the Stackly theme</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../JS/home.js"></script>
+<script src="../JS/contact.js"></script>
+</body>
+</html>

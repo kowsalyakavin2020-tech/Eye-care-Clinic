@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Technology — Stackly Eye Care Clinic</title>
+<meta name="description" content="Inside the Stackly Eye Care Clinic lab — imaging, diagnostics, simulation and aftercare instrumentation that reads the eye in cross-section.">
+<meta name="theme-color" content="#06181f">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<link rel="icon" href="../Images/logo-icon.webp" type="image/webp">
+<link rel="stylesheet" href="../CSS/home.css">
+<link rel="stylesheet" href="../CSS/technology.css">
+</head>
+<body class="is-locked">
+
+<!-- ══════════════════════════════════════════════════════════════════
+     PRELOADER  (identical to the landing page)
+     ══════════════════════════════════════════════════════════════ -->
+<div class="preloader" id="preloader" role="status" aria-live="polite" aria-label="Loading Stackly">
+  <div class="preloader__shutter"><span></span><span></span></div>
+  <div class="preloader__grid"></div>
+
+  <div class="preloader__inner">
+    <div class="pl-eye">
+      <span class="pl-eye__ring"></span>
+      <span class="pl-eye__lid"><span class="pl-eye__sweep"></span></span>
+      <span class="pl-eye__iris"><i class="fa-regular fa-eye"></i></span>
+      <span class="pl-eye__pupil"></span>
+    </div>
+
+    <div class="pl-brand" aria-hidden="true">
+      <span>S</span><span>T</span><span>A</span><span>C</span><span>K</span><span>L</span><span>Y</span>
+    </div>
+
+    <div class="pl-count"><b id="plNum">0</b><sup>%</sup></div>
+
+    <div class="pl-bar"><i id="plBar"></i></div>
+
+    <div class="pl-note"><i class="fa-solid fa-circle"></i> <span id="plNote">Calibrating diagnostics</span></div>
+  </div>
+</div>
+
+<div class="cursor" id="cursor"><span class="cursor__label" id="cursorLabel">View</span></div>
+<div class="noise" aria-hidden="true"></div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     SECTION 01 — HEADER  (identical; links retargeted across pages)
+     ══════════════════════════════════════════════════════════════ -->
+<header class="hdr" id="hdr">
+  <div class="hdr__in">
+    <a class="brand" href="../index.html" data-cursor-hide>
+      <img class="brand__logo" src="../Images/logo-full.webp" alt="Stackly Eye Care Clinic">
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Primary">
+      <span class="nav__orb" id="navOrb" aria-hidden="true"></span>
+      <ul class="nav__list">
+        <li><a class="nav__link" href="../index.html#home">Home</a></li>
+        <li><a class="nav__link" href="service.html">Services</a></li>
+        <li><a class="nav__link is-current" href="technology.html">Technology</a></li>
+        <li><a class="nav__link" href="about.html">About</a></li>
+        <li><a class="nav__link" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="hdr__act">
+      <a class="hdr__tel" href="404.html" data-cursor-hide>
+        <i class="fa-solid fa-phone-volume"></i><span>+91 9764536787</span>
+      </a>
+      <a class="btn btn--iris btn--sm hdr__book" href="login.html">
+        <i class="fa-regular fa-calendar-check"></i><span>Get Started</span>
+      </a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" data-cursor-hide>
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="hdr__prog" aria-hidden="true"><i id="progBar"></i></div>
+</header>
+
+<div class="mmenu" id="mmenu" aria-hidden="true">
+  <div class="mmenu__wipe">
+    <div class="mmenu__bg" aria-hidden="true"></div>
+    <div class="mmenu__inner">
+      <div class="mmenu__head">
+        <a class="mmenu__brand" href="../index.html" data-cursor-hide>
+          <img class="brand__logo" src="../Images/logo-full.webp" alt="Stackly Eye Care Clinic">
+        </a>
+        <button class="mmenu__close" id="mmenuClose" type="button" aria-label="Close menu" data-cursor-hide>
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <ul class="mmenu__links">
+        <li><a href="../index.html#home"><em>01</em><span>Home</span><i class="fa-solid fa-arrow-right-long"></i></a></li>
+        <li><a href="service.html"><em>02</em><span>Services</span><i class="fa-solid fa-arrow-right-long"></i></a></li>
+        <li><a class="is-active" href="technology.html" aria-current="page"><em>03</em><span>Technology</span><i class="fa-solid fa-arrow-right-long"></i></a></li>
+        <li><a href="about.html"><em>04</em><span>About</span><i class="fa-solid fa-arrow-right-long"></i></a></li>
+        <li><a href="contact.html"><em>05</em><span>Contact</span><i class="fa-solid fa-arrow-right-long"></i></a></li>
+      </ul>
+      <div class="mmenu__foot">
+        <a class="btn btn--iris" href="login.html"><i class="fa-regular fa-calendar-check"></i><span>Get Started</span></a>
+        <p class="mmenu__note"><i class="fa-solid fa-shield-heart"></i> Comprehensive eye care · Same-day appointments</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main>
+
+<!-- SECTION 02 — HERO · INSTRUMENT READY -->
+<section class="tch-hero" id="tchHero">
+  <div class="shell tch-hero__in">
+    <div class="tch-hero__copy">
+      <span class="tch-hero__kicker tch-kick"><i class="fa-solid fa-microscope"></i> The Stackly lab</span>
+
+      <h1 class="tch-hero__title">
+        <span class="line"><span>Technology that</span></span>
+        <span class="line"><span><span class="tch-hero__rot"><span>sees</span></span> the eye can&rsquo;t.</span></span>
+      </h1>
+
+      <p class="tch-hero__sub">Every diagnosis begins with instrumentation sharper than the human eye &mdash; and ends with a clinician who explains exactly what the machine found.</p>
+
+      <div class="tch-hero__cta">
+        <a class="btn btn--iris" href="404.html">
+          <i class="fa-regular fa-calendar-check"></i> Book a scan
+        </a>
+        <a class="btn btn--ghost" href="404.html">
+          <i class="fa-solid fa-arrow-down"></i> Explore the lab
+        </a>
+      </div>
+
+      <ul class="tch-hero__tape">
+        <li><i class="fa-solid fa-circle"></i> 10 imaging suites</li>
+        <li><i class="fa-solid fa-circle"></i> Micron change detection</li>
+        <li><i class="fa-solid fa-circle"></i> Same-day reporting</li>
+      </ul>
+    </div>
+
+    <div class="tch-hero__stage">
+      <span class="tch-hero__glow" aria-hidden="true"></span>
+      <div class="tch-hero__frame">
+        <img class="tch-media" src="../Images/treat-2.webp" alt="Stackly imaging technology in use during an examination">
+      </div>
+      <div class="tch-hero__badge">
+        <span aria-hidden="true"></span>
+        <img src="../Images/hero-inset.webp" alt="Detail view of the diagnostic display">
+      </div>
+      <span class="tch-hero__tag"><i class="fa-solid fa-bolt"></i> Live capture &middot; 0.4s</span>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 03 — SWITCH · CAPABILITY MODULES -->
+<section class="tch-sec tch-switch" id="tchSwitch">
+  <div class="shell">
+    <div class="tch-head">
+      <span class="tch-kick"><i class="fa-solid fa-sliders"></i> Capabilities</span>
+      <h2 class="tch-title">One platform, ten disciplines.</h2>
+      <p class="tch-sub">Hover a module to watch the suite reconfigure. Every discipline draws from the same calibration spine, so a scan taken for one purpose is instantly useful to another.</p>
+    </div>
+
+    <div class="tch-switch__in" style="margin-top: clamp(2rem, 4vw, 3rem);">
+      <div class="tch-switch__stage">
+        <div class="tch-switch__img is-on">
+          <img class="tch-media" src="../Images/tech-1.webp" alt="Retinal imaging module">
+          <span class="tch-switch__cap">Imaging &middot; fundus capture</span>
+        </div>
+        <div class="tch-switch__img">
+          <img class="tch-media" src="../Images/tech-2.webp" alt="Laser and refractive module">
+          <span class="tch-switch__cap">Refractive · femto laser</span>
+        </div>
+        <div class="tch-switch__img">
+          <img class="tch-media" src="../Images/tech-3.webp" alt="OCT cross-section module">
+          <span class="tch-switch__cap">Diagnostics · OCT scan</span>
+        </div>
+        <div class="tch-switch__img">
+          <img class="tch-media" src="../Images/tech-4.webp" alt="Dry-eye assessment module">
+          <span class="tch-switch__cap">Assessment · tear film</span>
+        </div>
+      </div>
+
+      <div class="tch-switch__list">
+        <button type="button" class="tch-switch__row is-on">
+          <span class="tch-switch__head"><span class="tch-switch__no">01</span><span class="tch-switch__name">Imaging</span></span>
+          <span class="tch-switch__body"><p>High-resolution fundus capture maps the retina in seconds, flagging micro-haemorrhages before they are visible to the naked eye.</p><em><i class="fa-solid fa-arrow-right"></i> Retinal imaging</em></span>
+        </button>
+        <button type="button" class="tch-switch__row">
+          <span class="tch-switch__head"><span class="tch-switch__no">02</span><span class="tch-switch__name">Refractive</span></span>
+          <span class="tch-switch__body"><p>Femtosecond laser profiles are shaped to your cornea's true curvature, refining every refraction to a fraction of a dioptre.</p><em><i class="fa-solid fa-arrow-right"></i> Laser correction</em></span>
+        </button>
+        <button type="button" class="tch-switch__row">
+          <span class="tch-switch__head"><span class="tch-switch__no">03</span><span class="tch-switch__name">Diagnostics</span></span>
+          <span class="tch-switch__body"><p>Optical coherence tomography slices the eye into cross-sections, letting clinicians track change microns deep, visit to visit.</p><em><i class="fa-solid fa-arrow-right"></i> OCT cross-sections</em></span>
+        </button>
+        <button type="button" class="tch-switch__row">
+          <span class="tch-switch__head"><span class="tch-switch__no">04</span><span class="tch-switch__name">Assessment</span></span>
+          <span class="tch-switch__body"><p>Tear-film and pressure analysis run alongside every scan, so surface health is measured, not guessed.</p><em><i class="fa-solid fa-arrow-right"></i> Surface health</em></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 04 — ATLAS · LABELLED SCAN -->
+<section class="tch-sec tch-atlas" id="tchAtlas">
+  <div class="shell">
+    <div class="tch-head">
+      <span class="tch-kick"><i class="fa-solid fa-map-location-dot"></i> Imaging atlas</span>
+      <h2 class="tch-title">Every layer, labelled.</h2>
+      <p class="tch-sub">Tap a marker to read what the scan is measuring. The whole atlas is generated from a single capture, then annotated by your clinician.</p>
+    </div>
+
+    <div class="tch-atlas__frame">
+      <div class="tch-atlas__stage">
+      <img class="tch-atlas__bg" src="../Images/hero-detail.webp" alt="Retinal scan overview with diagnostic overlays">
+      <span class="tch-atlas__veil" aria-hidden="true"></span>
+
+      <button type="button" class="tch-atlas__pin is-on" style="left:26%;top:30%" aria-label="Cornea">1</button>
+      <button type="button" class="tch-atlas__pin" style="left:64%;top:22%" aria-label="Lens">2</button>
+      <button type="button" class="tch-atlas__pin" style="left:44%;top:66%" aria-label="Retina">3</button>
+      <button type="button" class="tch-atlas__pin" style="left:74%;top:56%" aria-label="Optic nerve">4</button>
+      </div>
+
+      <div class="tch-atlas__panel">
+      <div class="tch-atlas__card is-on" style="left:26%;top:30%">
+        <i class="fa-solid fa-circle-dot"></i>
+        <b>Cornea</b>
+        <p>Shape and thickness mapped in 12 meridians to guide every refractive plan.</p>
+      </div>
+      <div class="tch-atlas__card" style="left:64%;top:22%">
+        <i class="fa-solid fa-circle-dot"></i>
+        <b>Lens</b>
+        <p>Opacity graded against a five-step scale, tracked across each visit.</p>
+      </div>
+      <div class="tch-atlas__card tch-atlas__card--up" style="left:44%;top:66%">
+        <i class="fa-solid fa-circle-dot"></i>
+        <b>Retina</b>
+        <p>Micro-aneurysms and drusen flagged automatically, mm by mm.</p>
+      </div>
+      <div class="tch-atlas__card tch-atlas__card--up" style="left:74%;top:56%">
+        <i class="fa-solid fa-circle-dot"></i>
+        <b>Optic nerve</b>
+        <p>Cup-to-disc ratio compared to a healthy baseline in real time.</p>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 05 — PATH · SCROLL-DRAWN ROUTE -->
+<section class="tch-sec tch-path" id="tchPath">
+  <div class="shell">
+    <div class="tch-head">
+      <span class="tch-kick"><i class="fa-solid fa-route"></i> Patient pathway</span>
+      <h2 class="tch-title">From first scan to clear sight.</h2>
+      <p class="tch-sub">Four steps, one continuous record. Scroll to trace the route the technology follows from capture to aftercare.</p>
+    </div>
+
+    <div class="tch-path__map">
+      <svg class="tch-path__svg" viewBox="0 0 1000 560" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="tchGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#16c7b4"/>
+            <stop offset="1" stop-color="#ff8a3d"/>
+          </linearGradient>
+        </defs>
+        <path class="tch-path__line" pathLength="1" d="M130 140 C 230 165, 300 205, 380 235 S 555 300, 630 330 S 800 400, 880 426"/>
+      </svg>
+
+      <div class="tch-path__nodes">
+        <div class="tch-path__node" style="--x:13%;--y:25%">
+          <span class="tch-path__node-media">
+            <span class="tch-path__node-no">1</span>
+            <img src="../Images/step-1.webp" alt="Patient being scanned">
+          </span>
+          <b>Capture</b>
+          <span>A single, non-contact scan records every layer of the eye.</span>
+        </div>
+        <div class="tch-path__node" style="--x:38%;--y:42%">
+          <span class="tch-path__node-media">
+            <span class="tch-path__node-no">2</span>
+            <img src="../Images/step-2.webp" alt="Clinician reading a scan">
+          </span>
+          <b>Diagnose</b>
+          <span>Software cross-references the image against thousands of healthy baselines.</span>
+        </div>
+        <div class="tch-path__node" style="--x:63%;--y:59%">
+          <span class="tch-path__node-media">
+            <span class="tch-path__node-no">3</span>
+            <img src="../Images/step-3.webp" alt="Treatment planning on screen">
+          </span>
+          <b>Treat</b>
+          <span>Laser and surgical plans are simulated before a single pulse is fired.</span>
+        </div>
+        <div class="tch-path__node" style="--x:88%;--y:76%">
+          <span class="tch-path__node-media">
+            <span class="tch-path__node-no">4</span>
+            <img src="../Images/step-4.webp" alt="Follow-up consultation">
+          </span>
+          <b>Follow up</b>
+          <span>Each new scan is diffed against the last, so change is never missed.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 06 — SPEC · TOLERANCES -->
+<section class="tch-sec tch-spec" id="tchSpec">
+  <div class="shell tch-spec__in">
+    <div class="tch-spec__media">
+      <img class="tch-media" src="../Images/treat-1.webp" alt="Laser alignment being calibrated on a patient model">
+      <div class="tch-spec__chip"><b>0.4<span>&micro;m</span></b><span>Alignment tolerance</span></div>
+    </div>
+
+    <div class="tch-spec__side">
+      <div class="tch-head">
+        <span class="tch-kick"><i class="fa-solid fa-gauge-high"></i> Specifications</span>
+        <h2 class="tch-title">Tolerances we publish.</h2>
+        <p class="tch-sub">Measured against international reference sets and re-verified every quarter. If a number moves, it moves in your favour.</p>
+      </div>
+
+      <div class="tch-spec__rows">
+        <div class="tch-spec__row">
+          <div class="tch-spec__row-top"><h4>Laser alignment</h4><b>99.98%</b></div>
+          <div class="tch-spec__bar"><i style="--w:99%"></i></div>
+        </div>
+        <div class="tch-spec__row">
+          <div class="tch-spec__row-top"><h4>Scan resolution</h4><b>12 MP</b></div>
+          <div class="tch-spec__bar"><i style="--w:86%"></i></div>
+        </div>
+        <div class="tch-spec__row">
+          <div class="tch-spec__row-top"><h4>Change detection</h4><b>1 &micro;m</b></div>
+          <div class="tch-spec__bar"><i style="--w:93%"></i></div>
+        </div>
+        <div class="tch-spec__row">
+          <div class="tch-spec__row-top"><h4>System uptime</h4><b>99.9%</b></div>
+          <div class="tch-spec__bar"><i style="--w:97%"></i></div>
+        </div>
+        <div class="tch-spec__row">
+          <div class="tch-spec__row-top"><h4>Report turnaround</h4><b>Under 4h</b></div>
+          <div class="tch-spec__bar"><i style="--w:88%"></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 07 — WIPE · RESOLUTION REVEAL -->
+<section class="tch-sec tch-wipe" id="tchWipe">
+  <div class="shell">
+    <div class="tch-head">
+      <span class="tch-kick"><i class="fa-solid fa-wand-magic-sparkles"></i> Image processing</span>
+      <h2 class="tch-title">Raw signal, made legible.</h2>
+      <p class="tch-sub">Scroll to strip away the raw capture and reveal the processed image your clinician actually reads.</p>
+    </div>
+
+    <div class="tch-wipe__stage" style="margin-top: clamp(2rem, 4vw, 3rem);">
+      <div class="tch-wipe__img tch-wipe__img--bot">
+        <img class="tch-media" src="../Images/tech-3.webp" alt="Processed OCT image">
+      </div>
+      <div class="tch-wipe__img tch-wipe__img--top">
+        <img class="tch-media" src="../Images/tech-2.webp" alt="Raw capture before processing">
+      </div>
+      <div class="tch-wipe__divider"><span class="tch-wipe__knob"><i class="fa-solid fa-left-right"></i></span></div>
+      <div class="tch-wipe__labels">
+        <span class="tch-wipe__label tch-wipe__label--a">Processed</span>
+        <span class="tch-wipe__label tch-wipe__label--b">Raw capture</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 07 — WALL · GALLERY WALL -->
+<section class="tch-sec tch-wall" id="tchWall">
+  <div class="shell">
+    <div class="tch-head">
+      <span class="tch-kick"><i class="fa-solid fa-camera-retro"></i> Inside the lab</span>
+      <h2 class="tch-title">Built, calibrated, kept honest.</h2>
+      <p class="tch-sub">A wall of the rooms, rigs and readings that make the numbers real. Hover a frame to bring it forward.</p>
+    </div>
+
+    <div class="tch-wall__grid">
+      <figure class="tch-wall__item tch-wall__item--a">
+        <img class="tch-media" src="../Images/gal-1.webp" alt="Diagnostic suite">
+        <figcaption class="tch-wall__cap">Diagnostic suite</figcaption>
+      </figure>
+      <figure class="tch-wall__item tch-wall__item--b">
+        <img class="tch-media" src="../Images/gal-2.webp" alt="Laser theatre">
+        <figcaption class="tch-wall__cap">Laser theatre</figcaption>
+      </figure>
+      <figure class="tch-wall__item tch-wall__item--c">
+        <img class="tch-media" src="../Images/gal-3.webp" alt="Calibration bench">
+        <figcaption class="tch-wall__cap">Calibration bench</figcaption>
+      </figure>
+      <figure class="tch-wall__item tch-wall__item--d">
+        <img class="tch-media" src="../Images/gal-4.webp" alt="Imaging console">
+        <figcaption class="tch-wall__cap">Imaging console</figcaption>
+      </figure>
+      <figure class="tch-wall__item tch-wall__item--e">
+        <img class="tch-media" src="../Images/gal-5.webp" alt="Sterile instrument tray">
+        <figcaption class="tch-wall__cap">Instrument tray</figcaption>
+      </figure>
+      <figure class="tch-wall__item tch-wall__item--f">
+        <img class="tch-media" src="../Images/gal-6.webp" alt="Consultation room">
+        <figcaption class="tch-wall__cap">Consultation room</figcaption>
+      </figure>
+      <figure class="tch-wall__item tch-wall__item--g">
+        <img class="tch-media" src="../Images/gal-7.webp" alt="Patient screening">
+        <figcaption class="tch-wall__cap">Patient screening</figcaption>
+      </figure>
+      <figure class="tch-wall__item tch-wall__item--h">
+        <img class="tch-media" src="../Images/gal-8.webp" alt="Data review">
+        <figcaption class="tch-wall__cap">Data review</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 08 — BAND · STATEMENT -->
+<section class="tch-band" id="tchBand">
+  <div class="tch-band__bg">
+    <img src="../Images/hero-clinic.webp" alt="Clinician and patient in the Stackly clinic">
+    <span class="tch-band__veil" aria-hidden="true"></span>
+  </div>
+
+  <div class="tch-band__in">
+    <div class="shell">
+      <span class="tch-kick tch-band__eyebrow"><i class="fa-solid fa-heart-pulse"></i> Why it matters</span>
+      <div class="tch-band__track">
+        <h2 class="tch-band__title">Technology should <em>disappear</em> behind the care.</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="tch-band__mini tch-band__mini--a"><img src="../Images/about-detail.webp" alt="Detail of a diagnostic display"></div>
+</section>
+
+<!-- SECTION 09 — DECK · INSTRUMENT TRAY -->
+<section class="tch-sec tch-deck" id="tchDeck">
+  <div class="shell">
+    <div class="tch-head">
+      <span class="tch-kick"><i class="fa-solid fa-flask-vial"></i> Instrument tray</span>
+      <h2 class="tch-title">The tools behind the trust.</h2>
+      <p class="tch-sub">Three of the instruments every Stackly room shares. Hover a card to bring it to the front.</p>
+    </div>
+
+    <div class="tch-deck__stage">
+      <article class="tch-deck__card">
+        <img class="tch-media" src="../Images/svc-1.webp" alt="Fundus camera">
+        <div class="tch-deck__meta"><b>Fundus camera</b><span>Retinal capture</span></div>
+      </article>
+      <article class="tch-deck__card">
+        <img class="tch-media" src="../Images/svc-2.webp" alt="Femtosecond laser">
+        <div class="tch-deck__meta"><b>Femto laser</b><span>Refractive precision</span></div>
+      </article>
+      <article class="tch-deck__card">
+        <img class="tch-media" src="../Images/svc-3.webp" alt="OCT scanner">
+        <div class="tch-deck__meta"><b>OCT scanner</b><span>Cross-section imaging</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 10 — OUTRO · CLOSING CALL -->
+<section class="tch-outro" id="tchOutro">
+  <div class="shell tch-outro__in">
+    <div class="tch-outro__copy">
+      <span class="tch-kick"><i class="fa-regular fa-calendar-check"></i> Book a scan</span>
+      <h2 class="tch-outro__title">Ask about the technology in person.</h2>
+      <p class="tch-sub">Bring a question, leave with a scan. Our clinicians walk you through every reading before you go.</p>
+      <span class="tch-outro__status" aria-live="polite"></span>
+      <a class="tch-outro__btn" href="404.html"><i class="fa-solid fa-arrow-right"></i> Book your scan</a>
+      <div class="tch-outro__chips">
+<a href="404.html"><i class="fa-solid fa-phone"></i> +91 9764536787</a>
+    <a href="404.html"><i class="fa-regular fa-envelope"></i> info@stackly.com</a>
+      </div>
+    </div>
+
+    <div class="tch-outro__media">
+      <img class="tch-media" src="../Images/cta-1.webp" alt="Patient consulting a clinician about their scan">
+      <span class="tch-outro__badge"><i class="fa-solid fa-eye"></i> Scan in under 10 minutes</span>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     SECTION 11 — FOOTER  (identical; links retargeted)
+     ══════════════════════════════════════════════════════════════ -->
+<footer class="ftr" id="contact">
+  <div class="ftr__eyeshape" data-reveal>
+    <img src="../Images/footer-map.webp" alt="Stackly locations worldwide">
+    <span class="ftr__eyeveil"></span>
+    <div class="ftr__eyetext">
+      <i class="fa-solid fa-location-dot"></i>
+      <b>38 clinics · 22 countries</b>
+      <em>Rotterdam · London · Singapore · São Paulo · Toronto</em>
+    </div>
+  </div>
+
+  <div class="shell ftr__grid">
+    <div class="ftr__brand">
+      <a class="ftr__lock" href="../index.html" aria-label="Stackly Eye Care Clinic — home"><img class="ftr__logo" src="../Images/logo-full.webp" alt="Stackly Eye Care Clinic"></a>
+      <p>An ophthalmic network that treats vision as an instrument worth
+        calibrating for life. Founded 1994, Rotterdam.</p>
+      <div class="ftr__social">
+        <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="404.html" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="404.html" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+
+    <nav class="ftr__col" data-reveal>
+      <h4>Company</h4>
+      <a href="../index.html#home">Home</a>
+      <a href="service.html">Services</a>
+      <a href="technology.html">Technology</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <nav class="ftr__col" data-reveal data-aos="fade-up" data-aos-delay="80">
+      <h4>Visit us</h4>
+      <span class="ftr__addr"><i class="fa-solid fa-location-dot"></i> MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008</span>
+      <a href="404.html"><i class="fa-regular fa-envelope"></i> info@stackly.com</a>
+      <a href="404.html"><i class="fa-solid fa-phone"></i> +91 9764536787</a>
+    </nav>
+
+    <div class="ftr__col ftr__col--form" data-reveal data-aos="fade-up" data-aos-delay="160">
+      <h4>Vision notes</h4>
+      <p>A quiet monthly letter on eye health, research and clinic openings.</p>
+      <form class="nl" id="nlForm" novalidate>
+        <input type="email" placeholder="Your email address" aria-label="Email address" autocomplete="email">
+        <button type="submit" aria-label="Subscribe" data-cursor-hide><i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+      <p class="nl-msg" id="nlMsg" role="status" aria-live="polite"></p>
+      <div class="ftr__contact">
+        <span><i class="fa-regular fa-clock"></i> Mon–Sat · 08:00–20:00</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="shell ftr__base">
+    <p>&copy; 2022 Stackly. All rights reserved.</p>
+    <ul>
+      <li><a href="404.html">Privacy</a></li>
+      <li><a href="404.html">Terms</a></li>
+      <li><a href="404.html">Cookies</a></li>
+      <li><a href="404.html">Accessibility</a></li>
+    </ul>
+    <p class="ftr__built"><i class="fa-solid fa-eye"></i> Crafted for the Stackly theme</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="../JS/home.js"></script>
+<script src="../JS/technology.js"></script>
+</body>
+</html>

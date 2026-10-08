@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create account · Stackly Eye Care Clinic</title>
+  <meta name="description" content="Create your Stackly Eye Care Clinic account — for optometrists, clinical staff and front-desk administrators.">
+  <link rel="icon" href="../Images/logo-icon.webp" type="image/webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../CSS/home.css">
+  <link rel="stylesheet" href="../CSS/auth.css">
+</head>
+<body class="auth auth--signup">
+
+  <div class="auth__bg" aria-hidden="true">
+    <img src="../Images/tech-2.webp" alt="">
+    <span class="auth__bgveil"></span>
+  </div>
+  <div class="auth__grid" aria-hidden="true"></div>
+
+  <header class="auth__top shell">
+    <a class="auth__brand" href="../index.html" aria-label="Stackly Eye Care Clinic — home">
+      <img src="../Images/logo-full.webp" alt="Stackly Eye Care Clinic">
+    </a>
+    <a class="auth__back" href="../index.html">
+      <i class="fa-solid fa-arrow-left"></i><span>Back to home</span>
+    </a>
+  </header>
+
+  <main class="auth__stage shell">
+    <section class="lg_wrap" aria-labelledby="signupTitle">
+      <div class="lg_orbit" aria-hidden="true"><i></i><i></i><i></i></div>
+
+      <aside class="lg_chip lg_chip--a" aria-hidden="true">
+        <i class="fa-solid fa-user-plus"></i>
+        <div><b>Quick setup</b><span>Ready in a minute</span></div>
+      </aside>
+      <aside class="lg_chip lg_chip--b" aria-hidden="true">
+        <i class="fa-solid fa-shield-heart"></i>
+        <div><b>Encrypted</b><span>256-bit secure</span></div>
+      </aside>
+
+      <article class="lg_card">
+        <div class="lg_banner">
+          <div class="lg_banner__img">
+            <img src="../Images/doc-1.webp" alt="A Stackly clinician reviewing results">
+          </div>
+          <div class="lg_banner__veil"></div>
+          <span class="lg_banner__chip"><i class="fa-solid fa-circle-check"></i> Join the care team</span>
+          <div class="lg_banner__copy">
+            <span class="lg_banner__eyebrow"><i class="fa-solid fa-eye"></i> Create account</span>
+            <h1 class="lg_banner__title" id="signupTitle">Join the <em>team</em>.</h1>
+          </div>
+          <div class="lg_porthole">
+            <img src="../Images/avatar-1.webp" alt="Stackly clinician">
+          </div>
+        </div>
+
+        <div class="lg_body">
+          <form class="auth-form" id="signupForm" novalidate autocomplete="off">
+            <div class="lg_body__grid">
+
+              <div class="af">
+                <label class="af__label" for="signupName"><i class="fa-regular fa-user"></i> Full name</label>
+                <div class="af__wrap">
+                  <input class="af__input" id="signupName" name="name" type="text"
+                         placeholder="Jane Doe" autocomplete="off" value="">
+                </div>
+                <p class="af__err"><i class="fa-solid fa-circle-exclamation"></i><span></span></p>
+              </div>
+
+              <div class="af">
+                <label class="af__label" for="signupEmail"><i class="fa-regular fa-envelope"></i> Email</label>
+                <div class="af__wrap">
+                  <input class="af__input" id="signupEmail" name="email" type="email" inputmode="email"
+                         placeholder="you@example.com" autocomplete="off" value="">
+                </div>
+                <p class="af__err"><i class="fa-solid fa-circle-exclamation"></i><span></span></p>
+              </div>
+
+              <div class="af af--pw af--full">
+                <label class="af__label" for="signupPassword"><i class="fa-solid fa-lock"></i> Password</label>
+                <div class="af__wrap">
+                  <input class="af__input" id="signupPassword" name="password" type="password"
+                         placeholder="Create a strong password" autocomplete="new-password" value="">
+                  <button class="af__eye" type="button" data-toggle="signupPassword" aria-label="Show password">
+                    <i class="fa-solid fa-eye"></i>
+                  </button>
+                </div>
+                <div class="auth-pw" id="pwMeter" data-level="0">
+                  <div class="auth-pw__meter">
+                    <span class="auth-pw__bar">
+                      <span class="auth-pw__seg"></span><span class="auth-pw__seg"></span>
+                      <span class="auth-pw__seg"></span><span class="auth-pw__seg"></span>
+                    </span>
+                    <span class="auth-pw__label">Strength</span>
+                  </div>
+                  <ul class="auth-reqs" id="pwReqs">
+                    <li data-req="len"><i class="fa-solid fa-check"></i> 8+ characters</li>
+                    <li data-req="upper"><i class="fa-solid fa-check"></i> Uppercase letter</li>
+                    <li data-req="lower"><i class="fa-solid fa-check"></i> Lowercase letter</li>
+                    <li data-req="number"><i class="fa-solid fa-check"></i> Number</li>
+                    <li data-req="special"><i class="fa-solid fa-check"></i> Special character</li>
+                  </ul>
+                </div>
+                <p class="af__err"><i class="fa-solid fa-circle-exclamation"></i><span></span></p>
+              </div>
+
+              <div class="af af--pw">
+                <label class="af__label" for="signupConfirm"><i class="fa-solid fa-lock"></i> Confirm password</label>
+                <div class="af__wrap">
+                  <input class="af__input" id="signupConfirm" name="confirm" type="password"
+                         placeholder="Repeat password" autocomplete="new-password" value="">
+                  <button class="af__eye" type="button" data-toggle="signupConfirm" aria-label="Show password">
+                    <i class="fa-solid fa-eye"></i>
+                  </button>
+                </div>
+                <p class="af__err"><i class="fa-solid fa-circle-exclamation"></i><span></span></p>
+              </div>
+
+              <div class="af af--sel">
+                <label class="af__label" for="signupRole"><i class="fa-solid fa-id-badge"></i> Role</label>
+                <div class="af__wrap">
+                  <select class="af__input" id="signupRole" name="role" autocomplete="off">
+                    <option value="">Select your role</option>
+                    <option value="optometrist">Optometrist · Clinical</option>
+                    <option value="administrator">Clinic Administrator · Front desk</option>
+                  </select>
+                  <i class="af__caret fa-solid fa-chevron-down" aria-hidden="true"></i>
+                </div>
+                <p class="af__err"><i class="fa-solid fa-circle-exclamation"></i><span></span></p>
+              </div>
+
+              <div class="lg_terms af--full">
+                <label class="acheck">
+                  <input type="checkbox" id="signupTerms" name="terms">
+                  <span class="acheck__box"><i class="fa-solid fa-check"></i></span>
+                  <span>I agree to the <a href="404.html">Terms</a> &amp; <a href="404.html">Privacy Policy</a>.</span>
+                </label>
+                <p class="af__err lg_terms__err"><i class="fa-solid fa-circle-exclamation"></i><span></span></p>
+              </div>
+
+              <button class="auth-form__submit af--full" id="signupSubmit" type="submit">
+                <i class="fa-solid fa-user-plus"></i> Create account
+              </button>
+
+              <div class="auth-form__sep af--full">or</div>
+
+              <button class="auth-google af--full" id="signupGoogle" type="button">
+                <i class="fa-brands fa-google"></i> Continue with Google
+              </button>
+
+              <p class="auth-form__note af--full" id="signupNote" role="status" aria-live="polite"></p>
+
+              <p class="auth-form__alt af--full">Already have an account? <a href="login.html">Sign in</a></p>
+            </div>
+          </form>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="../JS/auth.js"></script>
+</body>
+</html>
