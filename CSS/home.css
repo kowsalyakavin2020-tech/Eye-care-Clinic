@@ -2303,6 +2303,7 @@ figure, blockquote { margin: 0; }
   transition: background .4s, color .4s, transform .6s var(--ease-back);
 }
 .vnav:hover { background: var(--iris); color: var(--ink); transform: scale(1.12); }
+.vnav:disabled { opacity: .35; pointer-events: none; }
 .voices__dots { display: flex; gap: .5rem; }
 .voices__dots button {
   width: 9px; height: 9px;

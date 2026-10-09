@@ -625,11 +625,21 @@
         c.style.pointerEvents = ad === 0 ? 'auto' : 'none';
       });
       dots.forEach(function (d, i) { d.classList.toggle('is-on', i === active); });
+      syncNav();
     }
-    function go(n) { active = (n + vcards.length) % vcards.length; layout3d(); }
+    var vNext = $('#vNext'), vPrev = $('#vPrev');
+    function syncNav() {
+      if (vPrev) vPrev.disabled = active === 0;
+      if (vNext) vNext.disabled = active === vcards.length - 1;
+    }
+    function go(n) {
+      var next = Math.max(0, Math.min(vcards.length - 1, n));
+      if (next === active) return;
+      active = next;
+      layout3d();
+    }
     layout3d();
 
-    var vNext = $('#vNext'), vPrev = $('#vPrev');
     if (vNext) vNext.addEventListener('click', function () { go(active + 1); });
     if (vPrev) vPrev.addEventListener('click', function () { go(active - 1); });
     dots.forEach(function (d, i) { d.addEventListener('click', function () { go(i); }); });
